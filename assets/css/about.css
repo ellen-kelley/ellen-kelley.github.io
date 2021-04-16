@@ -2,6 +2,7 @@
 
 .features {
   background-color: #ffffff;
+  padding: 85px 10px;
 }
 .features .mt-5 {
   margin: 5px 10px !important;
@@ -29,7 +30,13 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  /* min-height: 400px; */
+}
+
+@media (max-width: 500px) {
+  .features .image {
+    padding: 50px 0;
+  }
 }
 
 /* Section - Team */

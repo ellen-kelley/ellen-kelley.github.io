@@ -213,3 +213,8 @@
   opacity: 1;
   bottom: calc(50% - 70px);
 }
+@media (max-width: 500px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
+}

@@ -3,7 +3,6 @@
 
 #main{
     background-color: #f9f8ff;
-
 }
 .contact-form{
     padding: 50px 25px 90px 25px;
@@ -79,7 +78,7 @@
     right: 20px;
     bottom: 0;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     z-index: -1;
   }
   
@@ -204,12 +203,20 @@
     .screen-body-item.left {
       flex-direction: column;
     }
-    .info-box-wrapper{
+    .contact-form .info-box-wrapper{
       margin: 0 auto;
+      width: 210px;
     }
     .screen-body-item {
       padding: 10px;
       padding-bottom: 30px;
+    }
+    .contact-form{
+      padding: 50px 25px 80px 25px;
+    }
+    .contact-form-container {
+      box-shadow: 3px 3px 30px -5px rgba(0,0,0,0.2);
+  
     }
   }
   
