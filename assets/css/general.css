@@ -15,6 +15,11 @@ a:hover {
   text-decoration: none;
 }
 
+a:focus {
+  color: #fff025;
+  outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -773,3 +778,5 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+
