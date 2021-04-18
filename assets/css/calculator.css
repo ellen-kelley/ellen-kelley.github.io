@@ -1,4 +1,4 @@
-.calculator{
+.calculator {
   padding: 120px 5px;
 }
 .calculator-body {
@@ -59,6 +59,9 @@
 }
 
 input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #000000;
   font-family: Lato, sans-serif;
   letter-spacing: 1.5px;
