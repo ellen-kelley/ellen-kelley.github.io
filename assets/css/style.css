@@ -718,12 +718,16 @@
   z-index: 1;
 }
 
-.testimonials .swiper-slide-next p {
-  transform: scale(1.1);
-  background: #7653eb;
-  color: #fff;
-  transition: 0.7s;
+
+@media (min-width: 1200px) {
+  .testimonials .swiper-slide-next p {
+    transform: scale(1.1);
+    background: #7653eb;
+    color: #fff;
+    transition: 0.7s;
+  }
 }
+
 
 .testimonials .swiper-pagination {
   margin-top: 50px;
