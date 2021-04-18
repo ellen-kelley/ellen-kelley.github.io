@@ -31,12 +31,20 @@ const data = [
     },
     price: 1200,
   },
+
   {
     id: 4,
     type: function () {
       squareType();
     },
     price: 450,
+  },
+  {
+    id: 5,
+    type: function () {
+      sliderType();
+    },
+    price: 750,
   },
 ];
 
