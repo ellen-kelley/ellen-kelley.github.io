@@ -68,6 +68,7 @@ input[type="number"] {
   transition: all 0.4s;
   border-radius: 5px;
   outline: none;
+  box-shadow: none;
   border: 1px solid #dadada;
   text-align: right;
 }
