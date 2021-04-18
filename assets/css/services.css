@@ -186,8 +186,7 @@
   .show {
     display: block !important;
     opacity: 1;
-    height: fit-content !important;
-    transform: translateY(0px);
+    transform: translateY(-200px);
     transition: all 1s ease-in-out;
   }
 }

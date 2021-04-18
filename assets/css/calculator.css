@@ -96,7 +96,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #output {
   margin-left: 20px;
-  min-width: 70px;
+  width: 70px;
   text-align: center;
 }
 #output::placeholder {
