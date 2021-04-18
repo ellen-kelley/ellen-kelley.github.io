@@ -1,25 +1,11 @@
-// Calculator Range Input
+// Section - All the data needed for calculations
 
-let sliderRange = document.querySelector("#slider");
-let sliderOutput = document.querySelector("#output");
-
-// sliderOutput.value = sliderRange.value;
-
-sliderRange.oninput = function () {
-  sliderOutput.value = this.value;
-};
-sliderOutput.oninput = function () {
-  sliderRange.value = this.value;
-};
-
-// Section - Data
-
-const apartments = [
+const data = [
   {
     id: 0,
     type: function () {
-      square.classList.add("hidden");
-      cm.classList.add("hidden");
+      squareInput.classList.add("hidden");
+      cmInput.classList.add("hidden");
       slider.classList.add("hidden");
       result.classList.add("hidden");
     },
@@ -29,138 +15,104 @@ const apartments = [
     type: function () {
       sliderType();
     },
-    cmPrice: 3000,
-    squarePrice: 700,
+    price: 3000,
   },
   {
     id: 2,
     type: function () {
       squareType();
     },
-    cmPrice: 3000,
-    squarePrice: 200,
+    price: 200,
   },
   {
     id: 3,
     type: function () {
       sliderType();
     },
-    cmPrice: 100,
-    squarePrice: 7000,
+    price: 1200,
+  },
+  {
+    id: 4,
+    type: function () {
+      squareType();
+    },
+    price: 450,
   },
 ];
+
+// Section - Match range slider with its input
+
+let sliderRange = document.querySelector("#slider");
+let sliderOutput = document.querySelector("#output");
+
+sliderRange.oninput = function () {
+  sliderOutput.value = this.value;
+};
+sliderOutput.oninput = function () {
+  sliderRange.value = this.value;
+};
 
 // Section - Calculator functionality
 
 // Select all elements to show and hide them when necessary
 let select = document.querySelector(".form-select");
-let square = document.querySelector(".square-wrapper");
-let cm = document.querySelector(".cm-wrapper");
+let squareInput = document.querySelector(".square-input-wrapper");
+let cmInput = document.querySelector(".cm-input-wrapper");
 let slider = document.querySelector(".slider-wrapper");
 let result = document.querySelector(".result");
 
+// Select all the input to later use their values
+let finalPrice = document.querySelector("#final-price");
+squareValue = document.querySelector("#square-value");
+cmValue = document.querySelector("#cm-value");
+
+// Toggle classes to display appropriate elements
 const squareType = () => {
   result.classList.add("hidden");
   slider.classList.add("hidden");
-  cm.classList.add("hidden");
-  square.classList.remove("hidden");
+  cmInput.classList.add("hidden");
+  squareInput.classList.remove("hidden");
 };
-
 const sliderType = () => {
   result.classList.add("hidden");
-  square.classList.add("hidden");
-  cm.classList.remove("hidden");
+  squareInput.classList.add("hidden");
+  cmInput.classList.remove("hidden");
   slider.classList.remove("hidden");
 };
 
+// Calculate and format the price and display it on the page
 const calculatePriceCM = () => {
-  cmValue = document.querySelector("#cm-value").value;
-
-  if (sliderOutput.value != "" && cmValue != "") {
+  if (sliderOutput.value != "" && cmValue.value != "") {
     result.classList.remove("hidden");
   } else result.classList.add("hidden");
 
-  price = sliderOutput.value * cmPrice * cmValue;
+  price = sliderOutput.value * cmValue.value * productPrice;
+  finalPrice.innerText = price.toLocaleString();
+};
+const calculatePriceSquare = () => {
+  if (squareValue.value != "") {
+    result.classList.remove("hidden");
+  } else result.classList.add("hidden");
+
+  price = squareValue.value * productPrice;
   finalPrice.innerText = price.toLocaleString();
 };
 
-const calculatePriceSquare = () => {
-  // cmValue = document.querySelector("#cm-value").value;
-
-  // if (sliderOutput.value != "" && cmValue != "") {
-  //   result.classList.remove("hidden");
-  // } else result.classList.add("hidden");
-
-  // price = sliderOutput.value * cmPrice * cmValue;
-  // finalPrice.innerText = price.toLocaleString();
-};
-
-let price, squarePrice, cmPrice;
-let finalPrice = document.querySelector("#final-price");
-
+// Triggers to call the appropriate functions when changes are made on the page
 select.onchange = () => {
   let i = select.selectedIndex;
+  data[i].type();
+  productPrice = data[i].price;
 
-  apartments[i].type();
-  // sliderPrice = apartments[i].sliderPrice;
-  cmPrice = apartments[i].cmPrice;
-  squarePrice = apartments[i].squarePrice;
-
-  // switch (i) {
-  //   case 0:
-  //     break;
-  //   case 1:
-  //     apartments[1].type();
-  //     sliderPrice = 1;
-  //     cmPrice = 700;
-  //     squarePrice = 1;
-  //     break;
-  //   case 2:
-  //     squareType();
-  //     cmPrice = 1;
-  //     squarePrice = 400;
-  //     sliderPrice = 1;
-  //     break;
-  //   case 3:
-  //     sliderType();
-  //     cmPrice = 3000;
-  //     squarePrice = 700;
-  //     sliderPrice = 1;
-  //     break;
-  //   case 4:
-  //     sliderType();
-  //     sliderPrice = 1000;
-  //     cmPrice = 800;
-  //     squarePrice = 1;
-  //     break;
-  //   case 5:
-  //     squareType();
-  //     sliderPrice = 1;
-  //     cmPrice = 1;
-  //     squarePrice = 20;
-  //     break;
-  //   default:
-  //     text = "No value found";
-  // }
-  finalPrice.innerText = 0;
-  let squareValue;
-  let cmValue;
+  squareValue.value = cmValue.value = sliderOutput.value = "";
+  sliderRange.value = 6;
 };
-
 slider.oninput = () => {
-  // cmValue = document.querySelector("#cm-value").value;
-  // if (sliderOutput.value != "" && cmValue != "") {
-  //   result.classList.remove("hidden");
-  // } else result.classList.add("hidden");
-  // price = sliderOutput.value * cmPrice * cmValue;
-  // finalPrice.innerText = price.toLocaleString();
   calculatePriceCM();
 };
-
-cm.oninput = () => {
+cmInput.oninput = () => {
   calculatePriceCM();
 };
-
-square.oninput = () => {
+squareInput.oninput = () => {
   calculatePriceSquare();
 };
