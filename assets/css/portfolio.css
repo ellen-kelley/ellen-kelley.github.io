@@ -117,7 +117,8 @@
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover,

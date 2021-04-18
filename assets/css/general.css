@@ -1,5 +1,7 @@
 /* Section - General Styles */
 
+@import url(//fonts.googleapis.com/earlyaccess/notosansarmenian.css);
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -28,7 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
+
 }
 
 ::selection {
@@ -252,7 +256,8 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 0 3px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
   font-size: 17px;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.7);
@@ -635,7 +640,8 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
 }
 
 #footer .footer-top h4 {

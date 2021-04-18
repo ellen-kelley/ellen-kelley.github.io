@@ -1,7 +1,8 @@
 /* General button styles */
 
 .btn-show-more {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
@@ -24,7 +25,6 @@
 
 /* Section  -  Hero */
 
-@import url(//fonts.googleapis.com/earlyaccess/notosansarmenian.css);
 
 #hero {
   width: 100%;
@@ -46,7 +46,6 @@
   font-weight: 700;
   line-height: 67px;
   color: #fff;
-  font-family: 'Noto Sans Armenian', sans-serif;
 }
 
 #hero h2 {
@@ -58,7 +57,8 @@
 }
 
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 1px;
@@ -192,7 +192,8 @@
 }
 
 .about .content .read-more {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -276,7 +277,8 @@
 
 .features-item .main-button {
   margin-top: 10px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -311,7 +313,8 @@
   display: block;
   color: #fff;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
 }
 
 .counts .counters p {
@@ -796,7 +799,8 @@
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Sans Armenian', sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover,
