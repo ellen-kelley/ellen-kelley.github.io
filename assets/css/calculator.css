@@ -61,6 +61,11 @@
   cursor: pointer;
 }
 
+#output::placeholder{
+  font-size: 20px;
+  
+}
+
 input[type="number"] {
   color: #000000;
   font-family: Lato, sans-serif;
@@ -73,6 +78,10 @@ input[type="number"] {
   outline: none;
   border: 1px solid #dadada;
   text-align: center;
+}
+input[type="number"]::placeholder{
+  font-size: 14px;
+  font-weight: 500;
 }
 input[type="number"]:hover {
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
@@ -92,7 +101,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 .input {
-  width: 20%;
+  width: 40%;
   margin: 0;
 }
 .square-wrapper, .cm-wrapper{

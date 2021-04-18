@@ -3,7 +3,7 @@
 let sliderRange = document.querySelector("#slider");
 let sliderOutput = document.querySelector("#output");
 
-sliderOutput.value = sliderRange.value;
+// sliderOutput.value = sliderRange.value;
 
 sliderRange.oninput = function () {
   sliderOutput.value = this.value;
@@ -12,105 +12,155 @@ sliderOutput.oninput = function () {
   sliderRange.value = this.value;
 };
 
+// Section - Data
+
+const apartments = [
+  {
+    id: 0,
+    type: function () {
+      square.classList.add("hidden");
+      cm.classList.add("hidden");
+      slider.classList.add("hidden");
+      result.classList.add("hidden");
+    },
+  },
+  {
+    id: 1,
+    type: function () {
+      sliderType();
+    },
+    cmPrice: 3000,
+    squarePrice: 700,
+  },
+  {
+    id: 2,
+    type: function () {
+      squareType();
+    },
+    cmPrice: 3000,
+    squarePrice: 200,
+  },
+  {
+    id: 3,
+    type: function () {
+      sliderType();
+    },
+    cmPrice: 100,
+    squarePrice: 7000,
+  },
+];
+
+// Section - Calculator functionality
+
+// Select all elements to show and hide them when necessary
 let select = document.querySelector(".form-select");
 let square = document.querySelector(".square-wrapper");
 let cm = document.querySelector(".cm-wrapper");
 let slider = document.querySelector(".slider-wrapper");
 let result = document.querySelector(".result");
 
-// result.innerText = output.value * 5000;
-let sliderPrice, squarePrice, cmPrice;
+const squareType = () => {
+  result.classList.add("hidden");
+  slider.classList.add("hidden");
+  cm.classList.add("hidden");
+  square.classList.remove("hidden");
+};
+
+const sliderType = () => {
+  result.classList.add("hidden");
+  square.classList.add("hidden");
+  cm.classList.remove("hidden");
+  slider.classList.remove("hidden");
+};
+
+const calculatePriceCM = () => {
+  cmValue = document.querySelector("#cm-value").value;
+
+  if (sliderOutput.value != "" && cmValue != "") {
+    result.classList.remove("hidden");
+  } else result.classList.add("hidden");
+
+  price = sliderOutput.value * cmPrice * cmValue;
+  finalPrice.innerText = price.toLocaleString();
+};
+
+const calculatePriceSquare = () => {
+  // cmValue = document.querySelector("#cm-value").value;
+
+  // if (sliderOutput.value != "" && cmValue != "") {
+  //   result.classList.remove("hidden");
+  // } else result.classList.add("hidden");
+
+  // price = sliderOutput.value * cmPrice * cmValue;
+  // finalPrice.innerText = price.toLocaleString();
+};
+
+let price, squarePrice, cmPrice;
 let finalPrice = document.querySelector("#final-price");
 
 select.onchange = () => {
   let i = select.selectedIndex;
 
-  // console.log(i);
+  apartments[i].type();
+  // sliderPrice = apartments[i].sliderPrice;
+  cmPrice = apartments[i].cmPrice;
+  squarePrice = apartments[i].squarePrice;
 
-  // if (i == 2) {
-  //   slider.classList.add("hidden");
-  //   cm.classList.add("hidden");
-  //   square.classList.remove("hidden");
+  // switch (i) {
+  //   case 0:
+  //     break;
+  //   case 1:
+  //     apartments[1].type();
+  //     sliderPrice = 1;
+  //     cmPrice = 700;
+  //     squarePrice = 1;
+  //     break;
+  //   case 2:
+  //     squareType();
+  //     cmPrice = 1;
+  //     squarePrice = 400;
+  //     sliderPrice = 1;
+  //     break;
+  //   case 3:
+  //     sliderType();
+  //     cmPrice = 3000;
+  //     squarePrice = 700;
+  //     sliderPrice = 1;
+  //     break;
+  //   case 4:
+  //     sliderType();
+  //     sliderPrice = 1000;
+  //     cmPrice = 800;
+  //     squarePrice = 1;
+  //     break;
+  //   case 5:
+  //     squareType();
+  //     sliderPrice = 1;
+  //     cmPrice = 1;
+  //     squarePrice = 20;
+  //     break;
+  //   default:
+  //     text = "No value found";
   // }
-  // if (i == 3) {
-  //   slider.classList.add("hidden");
-  //   square.classList.add("hidden");
-  //   cm.classList.remove("hidden");
-  // }
-
-  switch (i) {
-    case 0:
-      square.classList.add("hidden");
-      cm.classList.add("hidden");
-      slider.classList.add("hidden");
-      result.classList.add("hidden");
-      break;
-    case 1:
-      square.classList.add("hidden");
-      cm.classList.remove("hidden");
-      slider.classList.remove("hidden");
-      result.classList.remove("hidden");
-      sliderPrice = 1;
-      cmPrice = 2500;
-      squarePrice = 1;
-      // console.log(cmPrice, squarePrice, sliderPrice);
-      break;
-    case 2:
-      slider.classList.add("hidden");
-      cm.classList.add("hidden");
-      square.classList.remove("hidden");
-      result.classList.remove("hidden");
-      cmPrice = 1200;
-      squarePrice = 400;
-      sliderPrice = 1;
-      // console.log(cmPrice, squarePrice, sliderPrice);
-      break;
-    case 3:
-      slider.classList.add("hidden");
-      square.classList.add("hidden");
-      cm.classList.remove("hidden");
-      result.classList.remove("hidden");
-      cmPrice = 3000;
-      squarePrice = 700;
-      sliderPrice = 1;
-      // console.log(cmPrice, squarePrice, sliderPrice);
-      break;
-    case 4:
-      square.classList.add("hidden");
-      cm.classList.remove("hidden");
-      slider.classList.remove("hidden");
-      result.classList.remove("hidden");
-      sliderPrice = 1000;
-      cmPrice = 800;
-      squarePrice = 1;
-      // console.log(cmPrice, squarePrice, sliderPrice);
-      break;
-    case 5:
-      cm.classList.add("hidden");
-      slider.classList.add("hidden");
-      square.classList.remove("hidden");
-      result.classList.remove("hidden");
-      sliderPrice = 1;
-      cmPrice = 1;
-      squarePrice = 1;
-      // console.log(cmPrice, squarePrice, sliderPrice);
-      break;
-    default:
-      text = "No value found";
-  }
-  finalPrice.innerText = sliderOutput.value * sliderPrice * cmPrice * squarePrice;
-  let squareValue = document.querySelector("#square-value-1").value;
-// let cmValue = document.querySelector("#cm-value");
-console.log(squareValue);
+  finalPrice.innerText = 0;
+  let squareValue;
+  let cmValue;
 };
 
 slider.oninput = () => {
-  finalPrice.innerText = sliderOutput.value * cmPrice * squarePrice;
+  // cmValue = document.querySelector("#cm-value").value;
+  // if (sliderOutput.value != "" && cmValue != "") {
+  //   result.classList.remove("hidden");
+  // } else result.classList.add("hidden");
+  // price = sliderOutput.value * cmPrice * cmValue;
+  // finalPrice.innerText = price.toLocaleString();
+  calculatePriceCM();
 };
+
 cm.oninput = () => {
-  finalPrice.innerText = sliderOutput.value * cmPrice * squarePrice;
+  calculatePriceCM();
 };
+
 square.oninput = () => {
-  let squareValue = document.querySelector("#square-value-1").value;
-  finalPrice.innerText = cmPrice * squarePrice * squareValue * 1000;
+  calculatePriceSquare();
 };
