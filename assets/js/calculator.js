@@ -71,8 +71,8 @@ let result = document.querySelector(".result");
 
 // Select all the input to later use their values
 let finalPrice = document.querySelector("#final-price");
-squareValue = document.querySelector("#square-value");
-cmValue = document.querySelector("#cm-value");
+let squareValue = document.querySelector("#square-value");
+let cmValue = document.querySelector("#cm-value");
 
 // Toggle classes to display appropriate elements
 const squareType = () => {
