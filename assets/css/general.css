@@ -1,6 +1,6 @@
 /* Section - General Styles */
 
-@import url(./fonts/stylesheet.css); /* Nato Sans Armenian Font */
+/* @import url(./fonts/stylesheet.css); Nato Sans Armenian Font */
 
 body {
   /* font-family: "Open Sans", sans-serif; */
@@ -33,8 +33,7 @@ h5,
 h6 {
   /* font-family: "Poppins", sans-serif; */
   font-family: 'Noto Sans Armenian', sans-serif;
-  font-weight: 100;
-
+  /* font-weight: 100; */
 }
 
 ::selection {
