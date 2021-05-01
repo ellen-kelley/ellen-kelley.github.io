@@ -2,7 +2,7 @@
 
 .btn-show-more {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
@@ -25,7 +25,6 @@
 
 /* Section  -  Hero */
 
-
 #hero {
   width: 100%;
   height: 100vh;
@@ -42,7 +41,7 @@
 
 #hero h1 {
   margin: 0;
-  font-size: 52px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 67px;
   color: #fff;
@@ -58,7 +57,7 @@
 
 #hero .btn-get-started {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 1px;
@@ -193,7 +192,7 @@
 
 .about .content .read-more {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -232,13 +231,6 @@
 .process {
   position: relative;
   z-index: 9;
-  padding-bottom: 40px;
-}
-
-@media (max-width: 992px) {
-  .features-item {
-    margin-bottom: 45px;
-  }
 }
 
 .features-item {
@@ -278,7 +270,7 @@
 .features-item .main-button {
   margin-top: 10px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -299,6 +291,17 @@
   transition: all 0.5s ease-in-out;
 }
 
+@media (max-width: 992px) {
+  .features-item {
+    margin-bottom: 45px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .features-item h4 {
+    font-size: 18px;
+  }
+}
+
 /* Section - Counts */
 
 .counts {
@@ -314,7 +317,7 @@
   color: #fff;
   font-weight: 600;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 .counts .counters p {
@@ -383,12 +386,15 @@
   display: block;
   padding: 10px;
   margin: 0;
-  font-size: 30px;
+  font-size: 27px;
   color: #fff;
   border-radius: 0 50px 50px 0;
   background: #6355f2;
   text-align: center;
   position: relative;
+}
+.main-timeline .year i {
+  padding-right: 10px;
 }
 .main-timeline .year:before {
   content: "";
@@ -419,7 +425,7 @@
 }
 .main-timeline .description {
   font-size: 14px;
-  color: #7d7b7b;
+  color: #555353;
   margin: 0;
 }
 .main-timeline .timeline:nth-child(2n) {
@@ -724,7 +730,6 @@
   z-index: 1;
 }
 
-
 @media (min-width: 1200px) {
   .testimonials .swiper-slide-next p {
     transform: scale(1.1);
@@ -733,7 +738,6 @@
     transition: 0.7s;
   }
 }
-
 
 .testimonials .swiper-pagination {
   margin-top: 50px;
@@ -800,7 +804,7 @@
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover,
