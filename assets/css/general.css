@@ -214,7 +214,7 @@ section {
 #header .logo img {
   margin-top: 15px;
   padding: 7px;
-  max-height: 90px;
+  max-height: 110px;
   transition: 0.5s ease-in-out;
 }
 #header .logo-small img {
