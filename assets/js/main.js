@@ -341,6 +341,7 @@
     grabCursor: true,
     speed: 700,
     autoHeight: true,
+    initialSlide: 2,
     cubeEffect: {
       shadow: true,
       slideShadows: true,

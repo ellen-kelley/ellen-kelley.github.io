@@ -128,6 +128,9 @@
 }
 
 @media (max-width: 991px) {
+  #hero {
+    text-align: center;
+  }
   #hero .animated {
     -webkit-animation: none;
     animation: none;
