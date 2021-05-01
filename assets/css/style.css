@@ -2,7 +2,7 @@
 
 .btn-show-more {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
@@ -25,10 +25,9 @@
 
 /* Section  -  Hero */
 
-
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(45deg, rgba(163, 147, 253, 0.9) 0%, rgba(170, 86, 255, 0.9) 100%),
     url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
@@ -36,10 +35,12 @@
 
 #hero .container,
 #hero .container-fluid {
-  padding-top: 50px;
+  /* padding-top: 50px; */
   max-width: 1800px;
 }
-
+.hero-content {
+  padding-right: 60px;
+}
 #hero h1 {
   margin: 0;
   font-size: 52px;
@@ -58,7 +59,7 @@
 
 #hero .btn-get-started {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 1px;
@@ -82,6 +83,42 @@
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+/* Subsection - Cube Slider */
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.swiper-container-cube .swiper-cube-shadow {
+  opacity: 0.4;
+}
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  height: 12px;
+  width: 12px;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -45px;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background: none;
+}
+
 /* Subsection - Hero Media Queries */
 
 @media (min-width: 1200px) {
@@ -94,19 +131,18 @@
   #hero {
     text-align: center;
   }
-  #hero .container,
-  #hero .container-fluid {
-    padding-top: 68px;
-  }
+
   #hero .animated {
     -webkit-animation: none;
     animation: none;
   }
-  #hero .hero-img {
-    text-align: center;
+  #hero .hero-slider {
+    max-width: 60vw;
+    margin-top: 60px;
   }
-  #hero .hero-img img {
-    width: 50%;
+  .hero-content {
+    padding: 0 20px;
+    padding-top: 80px !important;
   }
 }
 
@@ -119,14 +155,24 @@
     font-size: 18px;
     line-height: 24px;
   }
-  #hero .hero-img img {
-    width: 60%;
+  #hero .hero-slider {
+    max-width: 80vw;
+    margin-top: 60px;
+  }
+  .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
   }
 }
 
 @media (max-width: 575px) {
-  #hero .hero-img img {
-    width: 80%;
+  .hero-content {
+    padding-top: 50px !important;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -25px;
   }
 }
 
@@ -193,7 +239,7 @@
 
 .about .content .read-more {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -278,7 +324,7 @@
 .features-item .main-button {
   margin-top: 10px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -314,7 +360,7 @@
   color: #fff;
   font-weight: 600;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 .counts .counters p {
@@ -724,7 +770,6 @@
   z-index: 1;
 }
 
-
 @media (min-width: 1200px) {
   .testimonials .swiper-slide-next p {
     transform: scale(1.1);
@@ -733,7 +778,6 @@
     transition: 0.7s;
   }
 }
-
 
 .testimonials .swiper-pagination {
   margin-top: 50px;
@@ -800,7 +844,7 @@
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover,

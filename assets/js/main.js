@@ -336,6 +336,29 @@
     },
   });
 
+  new Swiper(".hero-swiper", {
+    effect: "cube",
+    grabCursor: true,
+    speed: 700,
+    autoHeight: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 25,
+      shadowScale: 0.85,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: false,
+      dynamicBullets: true,
+    },
+    autoplay: {
+      delay: 3200,
+      disableOnInteraction: false,
+    },
+  });
+
   /**
    * Animation on scroll
    */
