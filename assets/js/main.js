@@ -339,16 +339,18 @@
   new Swiper(".hero-swiper", {
     effect: "cube",
     grabCursor: true,
+    loop: true,
     speed: 300,
     // autoHeight: true,
     // initialSlide: 2,
+    slidesOffsetAfter: 200,
+    loopAdditionalSlides: 1,
     cubeEffect: {
       shadow: true,
       slideShadows: true,
       shadowOffset: 25,
       shadowScale: 0.85,
     },
-    loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: false,
