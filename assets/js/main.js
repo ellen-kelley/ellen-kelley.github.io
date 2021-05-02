@@ -341,6 +341,7 @@
     grabCursor: true,
     loop: true,
     speed: 700,
+    preventInteractionOnTransition: true,
     initialSlide: 2,
     loopAdditionalSlides: 1,
     cubeEffect: {
