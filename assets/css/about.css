@@ -136,6 +136,14 @@
   opacity: 1;
 }
 
+.about-director {
+  padding: 80px 30px;
+}
+
+.about-director p {
+  font-size: 20px;
+}
+
 /* Section - Testimonials */
 
 .testimonials .testimonial-item {

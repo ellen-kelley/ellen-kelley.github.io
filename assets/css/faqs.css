@@ -39,6 +39,17 @@
   cursor: pointer;
 }
 
+.faq .faq-list .inner-link{
+  display: inline;
+  padding: 0;
+}
+.faq .faq-list .inner-link:visited{
+  color: #5846f9;
+}
+.faq .faq-list .inner-link:active{
+  color: #000;
+}
+
 .faq .faq-list .icon-help {
   font-size: 24px;
   position: absolute;
