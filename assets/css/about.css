@@ -8,6 +8,11 @@
   margin: 5px 10px !important;
 }
 
+.section-title .about-subheading {
+  padding: 50px 0 25px 0;
+  font-size: 28px;
+}
+
 .features .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
