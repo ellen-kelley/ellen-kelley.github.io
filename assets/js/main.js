@@ -342,9 +342,9 @@
     loop: true,
     speed: 700,
     // autoHeight: true,
-    initialSlide: 2,
-    slidesOffsetAfter: 200,
-    // loopAdditionalSlides: 1,
+    // initialSlide: 2,
+    // slidesOffsetAfter: 200,
+    loopAdditionalSlides: 1,
     cubeEffect: {
       shadow: true,
       slideShadows: true,
