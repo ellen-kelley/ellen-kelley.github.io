@@ -339,9 +339,9 @@
   new Swiper(".hero-swiper", {
     effect: "cube",
     grabCursor: true,
-    speed: 700,
-    autoHeight: true,
-    initialSlide: 2,
+    speed: 300,
+    // autoHeight: true,
+    // initialSlide: 2,
     cubeEffect: {
       shadow: true,
       slideShadows: true,
@@ -355,7 +355,7 @@
       dynamicBullets: true,
     },
     autoplay: {
-      delay: 3200,
+      delay: 3000,
       disableOnInteraction: false,
     },
   });
