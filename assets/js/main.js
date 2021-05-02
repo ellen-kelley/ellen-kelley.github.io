@@ -341,9 +341,7 @@
     grabCursor: true,
     loop: true,
     speed: 700,
-    // autoHeight: true,
-    // initialSlide: 2,
-    // slidesOffsetAfter: 200,
+    initialSlide: 2,
     loopAdditionalSlides: 1,
     cubeEffect: {
       shadow: true,
