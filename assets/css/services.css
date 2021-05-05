@@ -233,11 +233,12 @@
   font-size: 24px;
   margin-right: 5px;
   color: rgba(255, 255, 255, 0.8);
+  vertical-align: top;
 }
 .ftco-services .nav-pills .tab-link.active,
 .ftco-services .nav-pills .tab-link:hover {
   color: #fff;
-  font-size: 23px;
+  font-size: 22px;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;

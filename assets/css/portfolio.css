@@ -10,22 +10,21 @@
   bottom: 0px;
   text-align: center;
   color: white;
-
 }
-.scroll-down{
-    z-index: 20;
-    position: relative;
-    bottom: -30px;
-    padding: 12px 35px;
+.scroll-down {
+  z-index: 20;
+  position: relative;
+  bottom: -30px;
+  padding: 12px 35px;
 }
 
-.arrow-secondary{
-    position: absolute;
-    z-index: 3;
-    right: 0;
-    left: 0;
-    bottom: 10px;
-    text-align: center;
+.arrow-secondary {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  bottom: 10px;
+  text-align: center;
 }
 .arrow-scroll {
   animation: arrow-scroll 1.7s infinite ease;
@@ -118,7 +117,7 @@
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover,
@@ -179,6 +178,7 @@
   left: 0;
   right: 0;
   bottom: -50px;
+  /* transform: translateY(-50%); */
   text-align: center;
   z-index: 3;
   position: absolute;
@@ -188,7 +188,7 @@
 .portfolio .portfolio-wrap .portfolio-links a {
   color: rgba(255, 255, 255, 0.6);
   margin: 0 2px;
-  font-size: 28px;
+  font-size: 58px;
   display: inline-block;
   transition: 0.3s;
 }
@@ -212,10 +212,32 @@
 
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
-  bottom: calc(50% - 70px);
+  bottom: calc(50% - 50px);
 }
 @media (max-width: 500px) {
   .section-title h2 {
     font-size: 24px;
   }
+}
+
+/* Section - BTN */
+
+button.display-more-imgs {
+  padding: 8px 25px;
+  margin: 25px auto;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  background-color: #5e18ea;
+}
+
+button.display-more-imgs:hover {
+  color: #444444;
+  background-color: transparent;
+  border: 2px solid #5e18ea;
 }

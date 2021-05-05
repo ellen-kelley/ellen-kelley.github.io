@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        height: 30%;
+        width: 30%;
+        border: 3px solid black;
+    }
+</style>
+
+<body>
+    <form>
+        <input class="uploader" type="file" multiple>
+    </form>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<!-- SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBMpqeNQTu_OTTslm0lUEKYiS1RMWJFZMQ",
+        authDomain: "shs-advertising.firebaseapp.com",
+        databaseURL: "https://shs-advertising-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "shs-advertising",
+        storageBucket: "shs-advertising.appspot.com",
+        messagingSenderId: "804880876633",
+        appId: "1:804880876633:web:7ae2ab243c2e917bb45d48"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const projectStorage = firebase.storage();
+    const projectFirestore = firebase.database();
+</script>
+
+<script src="./assets/js/upload.js"></script>
+
+
+</html>
