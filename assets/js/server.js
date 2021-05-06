@@ -1,30 +1,54 @@
+const amount = 5; //how many images to fetch at once
+
+// Get initial images
 const getData = async () => {
-  const databaseRef = projectFirestore.ref("images/").limitToFirst(5);
+  const databaseRef = projectFirestore.ref("images/").limitToFirst(amount);
+  queryForData(databaseRef);
+};
+
+window.addEventListener("DOMContentLoaded", () => getData());
+
+// Get more images as needed
+
+const handleClick = () => {
+  lastDataKey = localStorage.getItem("lastKey");
+  loadMoreData(lastDataKey);
+};
+
+const loadMore = document.querySelector(".display-more-imgs");
+loadMore.addEventListener("click", handleClick);
+
+const loadMoreData = (lastDataKey) => {
+  const databaseRef = projectFirestore.ref("images/").limitToFirst(amount).startAfter(null, lastDataKey);
+  queryForData(databaseRef);
+};
+
+// Fetch data from the database
+
+const queryForData = (databaseRef) => {
   const query = databaseRef.on("value", (snapshot) => {
     const data = snapshot.val();
     console.log(data);
-    let lastDataKey = Object.keys(data)[Object.keys(data).length - 1];
-    displayData(data);
-    document.querySelector(".display-more-imgs").onclick = () => {
-      getMoreData(lastDataKey);
-    };
-  });
-};
-getData();
 
-const getMoreData = (lastDataKey) => {
-  const databaseRef = projectFirestore.ref("images/").limitToFirst(5).startAfter(null, lastDataKey);
-  databaseRef.on("value", (snapshot) => {
-    const data = snapshot.val();
-    console.log(data);
     displayData(data);
+
+    const lastDataKey = Object.keys(data)[Object.keys(data).length - 1];
+    localStorage.setItem("lastKey", lastDataKey);
+
+    if (Object.keys(data).length < amount) {
+      loadMore.removeEventListener("click", handleClick);
+      loadMore.style.display = "none";
+    }
   });
 };
+
+// Display data on the page
 
 const displayData = (data) => {
+  let template = "";
   for (const key in data) {
     const { url } = data[key];
-    document.querySelector(".portfolio-container").innerHTML += ` 
+    template += ` 
     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
       <div class="portfolio-wrap">
         <img src="${url + ".png"}" class="img-fluid" alt="">
@@ -37,7 +61,9 @@ const displayData = (data) => {
       </div>
     </div>`;
   }
-  setTimeout(function () {
+  document.querySelector(".portfolio-container").innerHTML += template;
+
+  setTimeout(() => {
     startPortfolio();
     removePreloader();
   }, 600);
@@ -50,7 +76,7 @@ const removePreloader = () => {
   }
 };
 
-const startPortfolio = (callback) => {
+const startPortfolio = () => {
   let portfolioContainer = document.querySelector(".portfolio-container");
   if (portfolioContainer) {
     let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -68,10 +94,13 @@ const startPortfolio = (callback) => {
         portfolioIsotope.arrange({
           filter: item.getAttribute("data-filter"),
         });
-        portfolioIsotope.on("arrangeComplete", function () {
+        portfolioIsotope.on("arrangeComplete", () => {
           AOS.refresh();
         });
       });
     });
   }
+  const portfolioLightbox = GLightbox({
+    selector: ".portfolio-lightbox",
+  });
 };
