@@ -1,8 +1,9 @@
-const amount = 5; //how many images to fetch at once
+const initialamount = 5; //how many images to fetch initially
+const loadAmount = 5; //how many images to fetch when clicking 'load more'
 
 // Get initial images
 const getData = async () => {
-  const databaseRef = projectFirestore.ref("images/").limitToFirst(amount);
+  const databaseRef = projectFirestore.ref("images/").limitToFirst(initialamount);
   queryForData(databaseRef);
 };
 
@@ -19,7 +20,7 @@ const loadMore = document.querySelector(".display-more-imgs");
 loadMore.addEventListener("click", handleClick);
 
 const loadMoreData = (lastDataKey) => {
-  const databaseRef = projectFirestore.ref("images/").limitToFirst(amount).startAfter(null, lastDataKey);
+  const databaseRef = projectFirestore.ref("images/").limitToFirst(loadAmount).startAfter(null, lastDataKey);
   queryForData(databaseRef);
 };
 
@@ -29,13 +30,12 @@ const queryForData = (databaseRef) => {
   const query = databaseRef.on("value", (snapshot) => {
     const data = snapshot.val();
     console.log(data);
-
     displayData(data);
 
     const lastDataKey = Object.keys(data)[Object.keys(data).length - 1];
     localStorage.setItem("lastKey", lastDataKey);
 
-    if (Object.keys(data).length < amount) {
+    if (Object.keys(data).length < loadAmount) {
       loadMore.removeEventListener("click", handleClick);
       loadMore.style.display = "none";
     }
@@ -49,9 +49,9 @@ const displayData = (data) => {
   for (const key in data) {
     const { url } = data[key];
     template += ` 
-    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
       <div class="portfolio-wrap">
-        <img src="${url + ".png"}" class="img-fluid" alt="">
+        <img src="${url + ".png"}" class="img-fluid" alt="" >
         <div class="portfolio-info">
         </div>
         <div class="portfolio-links">
@@ -63,10 +63,23 @@ const displayData = (data) => {
   }
   document.querySelector(".portfolio-container").innerHTML += template;
 
-  setTimeout(() => {
-    startPortfolio();
-    removePreloader();
-  }, 600);
+  Promise.all(
+    Array.from(document.images).map((img) => {
+      if (img.complete) return Promise.resolve(img.naturalHeight !== 0);
+      return new Promise((resolve) => {
+        img.addEventListener("load", () => resolve(true));
+        img.addEventListener("error", () => resolve(false));
+      });
+    })
+  ).then((results) => {
+    if (results.every((res) => res)) {
+      startPortfolio();
+      removePreloader();
+      document.querySelectorAll(".portfolio-item").forEach((item) => {
+        item.classList.remove("hidden");
+      });
+    }
+  });
 };
 
 const removePreloader = () => {

@@ -214,6 +214,10 @@
   opacity: 1;
   bottom: calc(50% - 50px);
 }
+
+.portfolio .hidden {
+  visibility: hidden;
+}
 @media (max-width: 500px) {
   .section-title h2 {
     font-size: 24px;
