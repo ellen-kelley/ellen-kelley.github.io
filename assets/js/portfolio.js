@@ -1,5 +1,5 @@
-const initialamount = 5; //how many images to fetch initially
-const loadAmount = 5; //how many images to fetch when clicking 'load more'
+const initialamount = 10; //how many images to fetch initially
+const loadAmount = 7; //how many images to fetch when clicking 'load more'
 
 // Get initial images
 const getData = async () => {
@@ -10,7 +10,6 @@ const getData = async () => {
 window.addEventListener("DOMContentLoaded", () => getData());
 
 // Get more images as needed
-
 const handleClick = () => {
   lastDataKey = localStorage.getItem("lastKey");
   loadMoreData(lastDataKey);
@@ -25,17 +24,20 @@ const loadMoreData = (lastDataKey) => {
 };
 
 // Fetch data from the database
-
 const queryForData = (databaseRef) => {
   const query = databaseRef.on("value", (snapshot) => {
     const data = snapshot.val();
-    console.log(data);
-    displayData(data);
+    if (data) {
+      displayData(data);
 
-    const lastDataKey = Object.keys(data)[Object.keys(data).length - 1];
-    localStorage.setItem("lastKey", lastDataKey);
+      const lastDataKey = Object.keys(data)[Object.keys(data).length - 1];
+      localStorage.setItem("lastKey", lastDataKey);
 
-    if (Object.keys(data).length < loadAmount) {
+      if (Object.keys(data).length < loadAmount) {
+        loadMore.removeEventListener("click", handleClick);
+        loadMore.style.display = "none";
+      }
+    } else {
       loadMore.removeEventListener("click", handleClick);
       loadMore.style.display = "none";
     }
@@ -43,13 +45,12 @@ const queryForData = (databaseRef) => {
 };
 
 // Display data on the page
-
 const displayData = (data) => {
   let template = "";
   for (const key in data) {
-    const { url } = data[key];
+    const { url, filter } = data[key];
     template += ` 
-    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
+    <div class="col-lg-4 col-md-6 portfolio-item ${filter} hidden">
       <div class="portfolio-wrap">
         <img src="${url + ".png"}" class="img-fluid" alt="" >
         <div class="portfolio-info">

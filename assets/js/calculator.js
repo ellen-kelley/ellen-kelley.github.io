@@ -63,11 +63,11 @@ sliderOutput.oninput = function () {
 // Section - Calculator functionality
 
 // Select all elements to show and hide them when necessary
-let select = document.querySelector(".form-select");
-let squareInput = document.querySelector(".square-input-wrapper");
-let cmInput = document.querySelector(".cm-input-wrapper");
-let slider = document.querySelector(".slider-wrapper");
-let result = document.querySelector(".result");
+const select = document.querySelector(".form-select");
+const squareInput = document.querySelector(".square-input-wrapper");
+const cmInput = document.querySelector(".cm-input-wrapper");
+const slider = document.querySelector(".slider-wrapper");
+const result = document.querySelector(".result");
 
 // Select all the input to later use their values
 let finalPrice = document.querySelector("#final-price");
