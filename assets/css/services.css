@@ -3,6 +3,7 @@
 .services {
   padding: 60px 0;
 }
+
 .section-title p {
   padding-bottom: 25px;
 }
@@ -15,6 +16,7 @@
   margin: 0 15px; /* between cards */
   min-height: 305px;
 }
+
 .col {
   margin: 35px 0;
 }
@@ -108,12 +110,14 @@
   font-size: 22px;
   font-weight: 700;
 }
+
 .card-body {
   padding: 25px;
   background-color: #fff;
   border-radius: 0 0 20px 20px;
   transition: all 0.7s ease-in-out;
 }
+
 .card .card-text {
   position: relative;
   top: -40px;
@@ -121,10 +125,12 @@
   height: 0;
   transition: all 0.7s ease-in-out;
 }
+
 .card:hover {
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in-out;
 }
+
 .card:hover .card-text {
   top: 10px;
   opacity: 1;
@@ -143,6 +149,7 @@
     width: 50%;
   }
 }
+
 @media (max-width: 767px) {
   .col {
     width: 100%;
@@ -166,23 +173,28 @@
   margin: 0 auto;
   padding: 0 30px;
 }
+
 .tab-content .py-5 {
   padding: 0rem 1.5rem !important;
 }
+
 .ftco-services .nav-link-wrap {
   background: #6355f2;
   border-radius: 20px;
 }
+
 @media (min-width: 768px) {
   .p-md-5 {
     padding: 0 3rem !important;
   }
+
   .tab-pane {
     display: block !important;
     height: 0 !important;
     opacity: 0;
     transform: translateY(50vh);
   }
+
   .show {
     display: block !important;
     opacity: 1;
@@ -190,13 +202,16 @@
     transition: all 1s ease-in-out;
   }
 }
+
 @media (max-width: 767.98px) {
   .ftco-services .nav-link-wrap {
     margin-top: 30px;
   }
+
   .ftco-services .p-4 {
     padding: 0 !important;
   }
+
   .tab-content .show {
     margin-top: 90px;
     display: block !important;
@@ -216,6 +231,7 @@
   transition: all 0.7s ease;
   padding: 10px 12px !important;
 }
+
 .ftco-services .nav-pills .tab-link:after {
   position: absolute;
   top: 20px;
@@ -229,12 +245,14 @@
   border-color: transparent #fafafa transparent transparent;
   opacity: 0;
 }
+
 .ftco-services .nav-pills .tab-link span {
   font-size: 24px;
   margin-right: 5px;
   color: rgba(255, 255, 255, 0.8);
   vertical-align: top;
 }
+
 .ftco-services .nav-pills .tab-link.active,
 .ftco-services .nav-pills .tab-link:hover {
   color: #fff;
@@ -246,15 +264,18 @@
   transition: all 0.3s ease;
   background: transparent;
 }
+
 .ftco-services .nav-pills .tab-link.active:after,
 .ftco-services .nav-pills .tab-link:hover:after {
   opacity: 1;
 }
+
 .ftco-services .nav-pills .tab-link.active span i,
 .ftco-services .nav-pills .tab-link:hover span i {
   color: #fff;
   transition: all 0.3s ease;
 }
+
 .ftco-services .tab-content .tab-pane .icon {
   font-size: 100px;
   line-height: 1.2;
@@ -266,6 +287,7 @@
   .ftco-services .nav-pills .tab-link:hover:after {
     opacity: 0;
   }
+
   .ftco-services .nav-pills .tab-link {
     display: block;
     width: 100%;

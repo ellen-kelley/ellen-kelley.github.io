@@ -165,7 +165,7 @@
   let tabLinks = document.querySelectorAll(".tab-link");
   let tabContent = document.querySelectorAll(".tab-pane");
 
-  tabLinks.forEach(function (el) {
+  tabLinks.forEach((el) => {
     el.addEventListener("click", openTabs);
   });
 
