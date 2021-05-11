@@ -78,6 +78,7 @@
 .intro .intro-item {
   padding-top: 2rem;
   background-size: cover;
+  background-position: center center;
 }
 
 .intro .carousel-item-a {
