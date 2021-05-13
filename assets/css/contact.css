@@ -4,6 +4,7 @@
 #main{
     background-color: #f9f8ff;
 }
+
 .contact-form{
     padding: 50px 25px 90px 25px;
   }
@@ -11,6 +12,7 @@
   .contact-form .section-title{
     padding-bottom: 50px;
   }
+
   .contact-form .info-box-wrapper{
     width: 230px;
     height: 250px;
@@ -23,6 +25,7 @@
     border-radius: 15px;
     padding: 20px 0 30px 0;
     background: #fff;
+    height: 210px;
   }
   
   .contact-form .info-box i {
@@ -37,13 +40,23 @@
     color: #2c4964;
     font-weight: 700;
     margin: 10px 0;
+    padding-bottom: 10px;
   }
   
   .contact-form .info-box p {
     padding: 0;
-    line-height: 24px;
-    font-size: 14px;
+    line-height: 28px;
+    font-size: 16px;
     margin-bottom: 0;
+  }
+
+  .contact-form .info-box p.email {
+    padding-top: 10px;
+  }
+
+  .contact-form .info-box p small{
+    color: #444444;
+    font-weight: 400;
   }
   
   .contact-form-container,
@@ -169,6 +182,7 @@
       height: min-content !important;
     }
   }
+
   @media screen and (max-width: 1275px) {
   
     .screen-body-item.left {
@@ -184,12 +198,15 @@
     .screen-body {
       padding: 40px;
     }
+
     .screen-body-item.left {
       flex-direction: column;
     }
+
     .info-box{
       margin: 20px 0;
     }
+
     .screen-body-item {
       padding: 0;
       padding-bottom: 30px;
@@ -200,20 +217,25 @@
     .screen-body {
       padding: 10px;
     }
+
     .screen-body-item.left {
       flex-direction: column;
     }
+
     .contact-form .info-box-wrapper{
       margin: 0 auto;
       width: 210px;
     }
+
     .screen-body-item {
       padding: 10px;
       padding-bottom: 30px;
     }
+
     .contact-form{
       padding: 50px 25px 80px 25px;
     }
+
     .contact-form-container {
       box-shadow: 3px 3px 30px -5px rgba(0,0,0,0.2);
   

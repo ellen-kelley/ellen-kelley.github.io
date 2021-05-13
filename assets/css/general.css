@@ -3,7 +3,7 @@
 /* @import url(./fonts/stylesheet.css); Nato Sans Armenian Font */
 
 body {
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   color: #444444;
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   /* font-weight: 100; */
 }
 
@@ -93,6 +93,7 @@ section {
   .section-title h2 {
     font-size: 28px;
   }
+
   .section-title {
     padding-bottom: 10px;
   }
@@ -161,6 +162,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -170,6 +172,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -222,6 +225,7 @@ section {
     max-height: 90px;
   }
 }
+
 #header .logo-small img {
   margin-top: 0;
   max-height: 65px;
@@ -263,7 +267,7 @@ section {
   justify-content: space-between;
   padding: 0 3px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
   font-size: 17px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
@@ -352,9 +356,9 @@ section {
   transition: 0.3s;
 }
 
-.navbar .dropdown ul li {
+/* .navbar .dropdown ul li {
   min-width: 200px;
-}
+} */
 
 .navbar .dropdown ul a {
   padding: 10px 20px;
@@ -395,6 +399,7 @@ section {
   .navbar .dropdown .dropdown ul {
     left: -90%;
   }
+
   .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
@@ -415,6 +420,7 @@ section {
   .mobile-nav-toggle {
     display: block;
   }
+
   .navbar ul {
     display: none;
   }
@@ -480,9 +486,11 @@ section {
 .navbar-mobile .active:before {
   visibility: hidden;
 }
+
 .navbar-mobile .active {
   color: #fff025;
 }
+
 .navbar-mobile a:hover,
 .navbar-mobile li:hover > a,
 .navbar .getstarted:hover {
@@ -500,6 +508,7 @@ section {
 .navbar-mobile a {
   color: #fff;
 }
+
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
@@ -535,6 +544,7 @@ section {
 .navbar-mobile .dropdown ul li:hover > a {
   color: #5846f9;
 }
+
 .navbar-mobile .dropdown {
   display: block;
   color: #fff;
@@ -544,6 +554,7 @@ section {
 .navbar-mobile a:not([href]):not([class]):active {
   color: #5846f9;
 }
+
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
@@ -591,9 +602,11 @@ section {
   .breadcrumbs .d-flex {
     display: block !important;
   }
+
   .breadcrumbs ol {
     display: block;
   }
+
   .breadcrumbs ol li {
     display: inline-block;
   }
@@ -612,10 +625,6 @@ section {
 #footer .footer-top {
   padding: 60px 0 30px 0;
   position: relative;
-}
-
-#footer .footer-top .footer-contact {
-  margin-bottom: 30px;
 }
 
 #footer .footer-top .logo-footer img {
@@ -647,7 +656,7 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Noto Sans Armenian', sans-serif;
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 #footer .footer-top h4 {
@@ -706,6 +715,7 @@ section {
   position: relative;
   padding-bottom: 12px;
 }
+
 #footer .getstarted {
   padding: 8px 25px;
   margin: 25px auto;
@@ -718,11 +728,13 @@ section {
   font-weight: 600;
   border: 2px solid #fff;
 }
+
 #footer .getstarted:hover {
   color: #5846f9;
   background-color: #fff;
   border-color: #fff;
 }
+
 #footer .footer-newsletter form {
   margin-top: 30px;
   background: #fff;

@@ -12,39 +12,36 @@ const data = [
   },
   {
     id: 1,
+    name: "Ծավալային տառեր",
     type: function () {
       sliderType();
     },
-    price: 3000,
+    price: 500,
   },
   {
     id: 2,
+    name: "Լուսավորվող արկղ (lightbox)",
     type: function () {
       squareType();
     },
-    price: 200,
+    price: 80000,
   },
   {
     id: 3,
+    name: "Բոնդերով երեսապատում",
     type: function () {
-      sliderType();
+      squareType();
     },
-    price: 1200,
+    price: 25000,
   },
 
   {
     id: 4,
+    name: "Բոնդերով լուսավորվող գովազդ",
     type: function () {
       squareType();
     },
-    price: 450,
-  },
-  {
-    id: 5,
-    type: function () {
-      sliderType();
-    },
-    price: 750,
+    price: 80000,
   },
 ];
 
@@ -68,6 +65,13 @@ const squareInput = document.querySelector(".square-input-wrapper");
 const cmInput = document.querySelector(".cm-input-wrapper");
 const slider = document.querySelector(".slider-wrapper");
 const result = document.querySelector(".result");
+
+// Print all dropdown options .
+data.forEach((item) => {
+  if (item.name) {
+    select.innerHTML += `<option>${item.name}</option>`;
+  }
+});
 
 // Select all the input to later use their values
 let finalPrice = document.querySelector("#final-price");
@@ -93,10 +97,14 @@ const calculatePriceCM = () => {
   if (sliderOutput.value != "" && cmValue.value != "") {
     result.classList.remove("hidden");
   } else result.classList.add("hidden");
-
-  price = sliderOutput.value * cmValue.value * productPrice;
+  if (cmValue.value > 50) {
+    price = sliderOutput.value * cmValue.value * (productPrice + 100);
+  } else {
+    price = sliderOutput.value * cmValue.value * productPrice;
+  }
   finalPrice.innerText = price.toLocaleString();
 };
+
 const calculatePriceSquare = () => {
   if (squareValue.value != "") {
     result.classList.remove("hidden");
