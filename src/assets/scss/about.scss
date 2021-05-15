@@ -1,0 +1,259 @@
+// Section - Features //
+
+.features {
+  background-color: #ffffff;
+  padding: 85px 10px;
+
+  .mt-5 {
+    margin: 5px 10px !important;
+  }
+}
+
+.section-title .about-subheading {
+  padding: 50px 0 25px 0;
+  font-size: 28px;
+}
+
+.features {
+  .icon-box {
+    h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 5px 0 10px 60px;
+    }
+
+    i {
+      font-size: 48px;
+      float: left;
+      color: #5846f9;
+    }
+
+    p {
+      font-size: 15px;
+      color: #848484;
+      margin-left: 60px;
+    }
+  }
+
+  .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .features .image {
+    padding: 50px 0;
+  }
+}
+
+// Section - Team //
+
+.team {
+  background: #f7f7f7;
+  padding: 80px 0 80px 0;
+
+  .member {
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+    transition: 0.3s;
+    margin: 0 10px;
+
+    .member-img {
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -5px;
+        height: 100%;
+        width: 100%;
+        background: url(../img/team-shape.svg) center (bottom / 110%) no-repeat;
+        z-index: 1;
+      }
+    }
+
+    .social {
+      position: absolute;
+      right: -100%;
+      top: 30px;
+      opacity: 0;
+      border-radius: 4px;
+      transition: 0.5s;
+      background: rgba(255, 255, 255, 0.3);
+      z-index: 2;
+
+      a {
+        transition: color 0.3s;
+        color: rgba(1, 41, 112, 0.5);
+        margin: 15px 12px;
+        display: block;
+        line-height: 0;
+        text-align: center;
+
+        &:hover {
+          color: rgba(1, 41, 112, 0.8);
+        }
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    .member-info {
+      padding: 10px 15px 20px 15px;
+
+      h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #012970;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        color: #aaaaaa;
+      }
+
+      p {
+        font-style: italic;
+        font-size: 14px;
+        padding-top: 15px;
+        line-height: 26px;
+        color: #5e5e5e;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0 40px rgba(0, 0, 0, 0.3);
+
+      .social {
+        right: 8px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.about-director {
+  padding: 80px 30px;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+// Section - Testimonials //
+
+.testimonials {
+  .testimonial-item {
+    box-sizing: content-box;
+    padding: 30px;
+    margin: 40px 30px;
+    box-shadow: 0px 0 20px rgba(1, 41, 112, 0.1);
+    background: #fff;
+
+    /* min-height: 30px; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+
+    .stars {
+      margin-bottom: 15px;
+
+      i {
+        color: #ffc107;
+        margin: 0 1px;
+      }
+    }
+
+    .testimonial-img {
+      width: 90px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin: 0 auto;
+      display: none;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+      color: #111;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: #999;
+      margin: 0;
+    }
+
+    p {
+      font-style: italic;
+      margin: 0 auto 15px auto;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      opacity: 1;
+      border: 1px solid #4154f1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #4154f1;
+    }
+  }
+
+  .swiper-slide {
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media (max-width: 1199px) {
+  .testimonials {
+    .swiper-slide-active {
+      opacity: 1;
+    }
+
+    .swiper-pagination {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonials .swiper-slide-next {
+    opacity: 1;
+    transform: scale(1.12);
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-title {
+    h2 {
+      font-size: 26px;
+      margin-bottom: 0;
+    }
+    padding-bottom: 10px;
+  }
+}

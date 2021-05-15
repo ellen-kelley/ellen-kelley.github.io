@@ -1,0 +1,99 @@
+// Section -  FAQs //
+
+.faq {
+  padding: 60px 10px;
+
+  .faq-list {
+    padding: 50px;
+    border-radius: 15px;
+    background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+
+    ul {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 0;
+    }
+
+    li {
+      + li {
+        margin-top: 25px;
+      }
+      padding: 30px;
+      background: #fff;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      padding: 0 30px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .inner-link {
+      display: inline;
+      padding: 0;
+
+      &:visited {
+        color: #5846f9;
+      }
+
+      &:active {
+        color: #000;
+      }
+    }
+
+    .icon-help {
+      font-size: 24px;
+      position: absolute;
+      right: 0;
+      left: 20px;
+      color: #8577fb;
+    }
+
+    .icon-show,
+    .icon-close {
+      font-size: 24px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      padding: 10px 0 0 0;
+    }
+
+    .icon-show {
+      display: none;
+    }
+
+    a.collapsed {
+      color: #2c4964;
+
+      &:hover {
+        color: #5846f9;
+      }
+
+      .icon-show {
+        display: inline-block;
+      }
+
+      .icon-close {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .faq .faq-list {
+    padding: 20px;
+  }
+}

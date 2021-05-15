@@ -1,0 +1,245 @@
+.calculator {
+  padding: 145px 5px;
+}
+
+.calculator-body {
+  max-width: 700px;
+  margin: 0 35px;
+  padding: 35px 0 25px 0;
+  background: #fff;
+}
+
+.calculator-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+.form-select {
+  width: 100%;
+  margin: 20px 0;
+}
+
+#slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 18px !important;
+  width: 60%;
+  border-radius: 10em;
+  border: 1px solid #2a1379;
+  display: block;
+  text-align: right;
+}
+
+#slider:focus {
+  outline: none;
+}
+
+#slider::-ms-thumb {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #6355f2;
+  cursor: pointer;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #6355f2;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #6355f2;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000000;
+  font-family: Lato, sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  padding: 5px 10px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 5px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #dadada;
+  text-align: right;
+}
+
+input[type="number"]::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+input[type="number"]:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+input[type="number"]::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+input[type="number"]::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+input[type="number"]:hover {
+  -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#output {
+  margin-left: 20px;
+  width: 70px;
+  text-align: center;
+}
+
+#output::-webkit-input-placeholder {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#output:-ms-input-placeholder {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#output::-ms-input-placeholder {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#output::placeholder {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.result {
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  background-color: #6355f2;
+  text-align: center;
+  color: #fff;
+}
+
+.input {
+  width: 40%;
+  margin: 0;
+}
+
+.square-input-wrapper,
+.cm-input-wrapper {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.slider-wrapper {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.square-symbol {
+  position: relative;
+  top: -3px;
+  left: 3px;
+  padding-right: 3px;
+}
+
+#final-price {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 500px) {
+  .input {
+    width: 100%;
+    margin: 0;
+  }
+  #slider {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    min-width: 200px;
+  }
+  .slider-wrapper {
+    padding: 0;
+  }
+  .slider-wrapper span {
+    padding: 25px 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #output {
+    margin: 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.hidden {
+  display: none;
+}

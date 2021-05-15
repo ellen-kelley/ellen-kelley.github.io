@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>SHS Advertising - Services</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon.ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon.ico/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./assets/img/favicon.ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    form h1 {
+        padding-bottom: 30px;
+    }
+
+    .container img {
+        max-width: 350px;
+        margin: 30px auto;
+        display: block;
+        width: 95%;
+    }
+
+    .container {
+        max-width: 1350px;
+        padding: 30px 10px;
+        margin: 50px auto;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        background: rgb(243, 243, 243);
+        border-radius: 15px;
+        display: none;
+    }
+
+    .container .form-select {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    form {
+        margin: 30px auto 10px;
+        text-align: center;
+        font-family: 'Noto Sans Armenian', sans-serif;
+    }
+
+    label input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+
+    label {
+        display: block;
+        width: 50%;
+        max-width: 500px;
+        height: 50px;
+        border-radius: 5px;
+        margin: 10px auto;
+        line-height: 30px;
+        background: #5E18EA;
+        border: 1px solid #5E18EA;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    label:hover {
+        background: transparent;
+        color: #5E18EA;
+        cursor: pointer;
+    }
+
+    span {
+        vertical-align: middle;
+    }
+
+    .confirm {
+        display: none;
+    }
+
+    .sumbit-btn {
+        padding: 8px 25px;
+        margin: 25px auto;
+        text-align: center;
+        display: block;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #5E18EA;
+        transition: 0.3s;
+        font-size: 24px;
+        font-weight: 600;
+        border: 2px solid #fff;
+    }
+
+    .message {
+        text-align: center;
+        padding: 30px 0;
+        /* display: none; */
+    }
+</style>
+
+<body>
+    <form>
+        <h1>Ընտրեք մեկ, կամ մի քանի նկարներ...</h1>
+        <label class="upload-btn">
+            <input class="uploader" type="file" multiple>
+            <span>+</span>
+        </label>
+    </form>
+
+    <div class="container">
+    </div>
+    <div class="confirm">
+        <button class="sumbit-btn">Հաստատել</button>
+    </div>
+    <div class="message">
+        <h2></h2>
+    </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<!-- SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBMpqeNQTu_OTTslm0lUEKYiS1RMWJFZMQ",
+        authDomain: "shs-advertising.firebaseapp.com",
+        databaseURL: "https://shs-advertising-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "shs-advertising",
+        storageBucket: "shs-advertising.appspot.com",
+        messagingSenderId: "804880876633",
+        appId: "1:804880876633:web:7ae2ab243c2e917bb45d48"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const projectStorage = firebase.storage();
+    const projectFirestore = firebase.database();
+</script>
+
+<!-- <script src="./assets/js/upload.js"></script> -->
+
+
+</html>

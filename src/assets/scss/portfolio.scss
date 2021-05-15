@@ -1,0 +1,251 @@
+//  Section - Full page slider  //
+
+//  Subsection - Animated arrow  //
+
+.arrow-scroll {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  bottom: 0px;
+  text-align: center;
+  color: white;
+}
+
+.scroll-down {
+  z-index: 20;
+  position: relative;
+  bottom: -30px;
+  padding: 12px 35px;
+}
+
+.arrow-secondary {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  bottom: 10px;
+  text-align: center;
+}
+
+.arrow-scroll {
+  animation: arrow-scroll 1.7s infinite ease;
+  z-index: 3;
+}
+
+@keyframes arrow-scroll {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  55% {
+    transform: translateY(-10px);
+  }
+}
+
+// Subsection - Start of slider //
+
+.intro {
+  height: calc(100vh - 75px);
+  position: relative;
+  color: #ffffff;
+
+  .swiper-pagination {
+    bottom: 75px;
+    z-index: 10;
+
+    .swiper-pagination-bullet {
+      width: 18px;
+      height: 10px;
+      background-color: #ffffff;
+      border-radius: 0;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #5846f9;
+      width: 36px;
+    }
+  }
+
+  .intro-item {
+    padding-top: 2rem;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .carousel-item-a {
+    position: relative;
+    height: calc(100vh - 75px);
+
+    &.bg-image {
+      background-attachment: scroll;
+    }
+  }
+}
+
+// Section - Portfolio //
+
+.portfolio {
+  padding: 100px 0 50px 0;
+
+  .portfolio-item {
+    margin-bottom: 20px;
+  }
+
+  #portfolio-flters {
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+    padding: 2px 15px;
+
+    li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #444444;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      &:hover,
+      &.filter-active {
+        color: #fff;
+        background: #5846f9;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      background: rgba(88, 70, 249, 0.8);
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      top: 30px;
+      bottom: 30px;
+      transition: all ease-in-out 0.3s;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .portfolio-info {
+      opacity: 0;
+      position: absolute;
+      top: 10%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+
+      h4 {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      p {
+        color: #ffffff;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+
+    .portfolio-links {
+      opacity: 0;
+      left: 0;
+      right: 0;
+      bottom: -50px;
+      text-align: center;
+      z-index: 3;
+      position: absolute;
+      transition: all ease-in-out 0.3s;
+
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0 2px;
+        font-size: 58px;
+        display: inline-block;
+        transition: 0.3s;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    &:hover {
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+      }
+
+      .portfolio-info {
+        opacity: 1;
+        top: calc(50% - 48px);
+      }
+
+      .portfolio-links {
+        opacity: 1;
+        bottom: calc(50% - 50px);
+      }
+    }
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .display-more-imgs {
+    padding: 10px 28px;
+    letter-spacing: 1px;
+    margin: 25px auto;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    background-color: #5e18ea;
+
+    &:hover {
+      color: #444444;
+      background-color: transparent;
+      border: 2px solid #5e18ea;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
+}

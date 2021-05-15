@@ -1,0 +1,12 @@
+(self.webpackChunkellen_kelley_github_io=self.webpackChunkellen_kelley_github_io||[]).push([[824],{692:(e,t,l)=>{"use strict";var o=l(421),r=(l(184),l(391)),i=l.n(r),r=l(727),a=l.n(r),r=l(711),s=l.n(r);new o.Z(".intro-carousel",{speed:600,loop:!0,autoplay:{delay:4e3,disableOnInteraction:!1},slidesPerView:"auto",pagination:{el:".swiper-pagination",type:"bullets",clickable:!0}});let n;window.addEventListener("DOMContentLoaded",()=>(async()=>{var e=projectFirestore.ref("images/").limitToFirst(10);p(e)})());const c=()=>{n=localStorage.getItem("lastKey"),m(n)},d=document.querySelector(".display-more-imgs");d.addEventListener("click",c);const m=e=>{e=projectFirestore.ref("images/").limitToFirst(7).startAfter(null,e);p(e)},p=e=>{e.on("value",e=>{var t=e.val();t?(f(t),e=Object.keys(t)[Object.keys(t).length-1],localStorage.setItem("lastKey",e),Object.keys(t).length<7&&(d.removeEventListener("click",c),d.style.display="none")):(d.removeEventListener("click",c),d.style.display="none")})},f=e=>{let t="";for(const r in e){var{url:l,filter:o}=e[r];t+=` 
+    <div class="col-lg-4 col-md-6 portfolio-item ${o} hidden">
+      <div class="portfolio-wrap">
+        <img src="${l+".png"}" class="img-fluid" alt="" >
+        <div class="portfolio-info">
+        </div>
+        <div class="portfolio-links">
+          <a href="${l+".png"}" data-gallery="portfolioGallery"
+            class="portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+        </div>
+      </div>
+    </div>`}document.querySelector(".portfolio-container").innerHTML+=t,Promise.all(Array.from(document.images).map(t=>t.complete?Promise.resolve(0!==t.naturalHeight):new Promise(e=>{t.addEventListener("load",()=>e(!0)),t.addEventListener("error",()=>e(!1))}))).then(e=>{e.every(e=>e)&&(u(),v(),document.querySelectorAll(".portfolio-item").forEach(e=>{e.classList.remove("hidden")}))})},v=()=>{let e=document.querySelector("#preloader");e&&e.remove()},u=()=>{var e=document.querySelector(".portfolio-container");if(e){let l=new(i())(e,{itemSelector:".portfolio-item"}),o=document.querySelectorAll("#portfolio-flters li");o.forEach(t=>{t.addEventListener("click",e=>{e.preventDefault(),o.forEach(e=>{e.classList.remove("filter-active")}),t.classList.add("filter-active"),l.arrange({filter:t.getAttribute("data-filter")}),l.on("arrangeComplete",()=>{s().refresh()})})})}a()({selector:".portfolio-lightbox"})}}},e=>{"use strict";e.O(0,[216],()=>e(e.s=692));e.O()}]);
