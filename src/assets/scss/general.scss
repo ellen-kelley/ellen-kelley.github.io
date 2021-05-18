@@ -210,9 +210,9 @@ section {
 }
 
 #header .logo img {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 7px;
-  max-height: 110px;
+  max-height: 100px;
   transition: 0.5s ease-in-out;
 }
 
@@ -613,7 +613,7 @@ section {
 }
 
 #footer .footer-top {
-  padding: 60px 0 30px 0;
+  padding: 60px 15px 30px 15px;
   position: relative;
 }
 
@@ -642,10 +642,15 @@ section {
 }
 
 #footer .footer-top .footer-contact p {
-  font-size: 14px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Noto Sans Armenian", sans-serif;
+}
+
+#footer .footer-top .footer-contact .footer-phone {
+  padding-bottom: 15px;
 }
 
 #footer .footer-top h4 {
@@ -653,10 +658,6 @@ section {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 5px;
 }
 
 #footer .footer-top .footer-links ul {
@@ -707,7 +708,7 @@ section {
 
 #footer .getstarted {
   padding: 8px 25px;
-  margin: 25px auto;
+  margin-top: 25px;
   display: block;
   text-align: center;
   border-radius: 5px;
@@ -722,42 +723,6 @@ section {
   color: #5846f9;
   background-color: #fff;
   border-color: #fff;
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 5px;
-  text-align: left;
-  border: 1px solid white;
-}
-
-#footer .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: -1px;
-  right: -2px;
-  bottom: -1px;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: rgba(123, 39, 216, 0.8);
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 5px 5px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-#footer .footer-newsletter form input[type="submit"]:hover {
-  background: #5846f9;
 }
 
 #footer .copyright-wrap {
@@ -793,4 +758,17 @@ section {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  #footer .footer-top .footer-about {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer .footer-top .footer-menu,
+  #footer .footer-top .footer-newsletter {
+    padding-top: 30px;
+  }
 }

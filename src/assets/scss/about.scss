@@ -71,11 +71,11 @@
         position: absolute;
         content: "";
         left: 0;
-        bottom: -5px;
+        bottom: -15px;
         height: 100%;
         width: 100%;
-        background: url(../img/team-shape.svg) center (bottom / 110%) no-repeat;
-        z-index: 1;
+        background: url(../img/team-shape.svg) center bottom/110% no-repeat;
+        z-index: 2;
       }
     }
 
@@ -150,6 +150,17 @@
 
   p {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .team .member {
+    margin: 25px 10px;
+  }
+
+  .about-director {
+    padding: 40px 30px;
   }
 }
 

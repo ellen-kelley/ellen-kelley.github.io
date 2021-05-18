@@ -1,4 +1,31 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1" name="viewport"><title>SHS Advertising - Services</title><meta content="" name="description"><meta content="" name="keywords"><link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon.ico/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.ico/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.ico/favicon-16x16.png"><link rel="manifest" href="./assets/img/favicon.ico/site.webmanifest"><link rel="mask-icon" href="./assets/img/favicon.ico/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="./assets/img/favicon.ico/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="./assets/img/favicon.ico/browserconfig.xml"><meta name="theme-color" content="#ffffff"><title>Document</title><script defer="defer" src="./js/runtime.bundle.js"></script><script defer="defer" src="./js/vendors.bundle.js"></script><script defer="defer" src="./js/main.bundle.js"></script><script defer="defer" src="./js/upload.bundle.js"></script><link href="./css/vendors.efd9dc43283c1f219c94.css" rel="stylesheet"><link href="./css/main.efd9dc43283c1f219c94.css" rel="stylesheet"></head><style>body {
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>SHS - Upload</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon.ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon.ico/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./assets/img/favicon.ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <title>Document</title>
+<script defer src="js/runtime.bundle.js"></script><script defer src="js/vendors.bundle.js"></script><script defer src="js/main.bundle.js"></script><script defer src="js/upload.bundle.js"></script><link href="css/vendors.b7048cd3999aeb130284.css" rel="stylesheet"><link href="css/main.b7048cd3999aeb130284.css" rel="stylesheet"></head>
+<style>
+    body {
         padding: 0 10px;
         margin: 0;
     }
@@ -92,7 +119,46 @@
         text-align: center;
         padding: 30px 0;
         /* display: none; */
-    }</style><body><form><h1>Ընտրեք մեկ, կամ մի քանի նկարներ...</h1><label class="upload-btn"><input class="uploader" type="file" multiple="multiple"> <span>+</span></label></form><div class="container"></div><div class="confirm"><button class="sumbit-btn">Հաստատել</button></div><div class="message"><h2></h2></div></body><script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script><script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script><script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script><script>// Your web app's Firebase configuration
+    }
+</style>
+
+<body>
+    <form>
+        <h1>Ընտրեք մեկ, կամ մի քանի նկարներ...</h1>
+        <label class="upload-btn">
+            <input class="uploader" type="file" multiple>
+            <span>+</span>
+        </label>
+    </form>
+
+    <div class="container">
+    </div>
+    <div class="confirm">
+        <button class="sumbit-btn">Հաստատել</button>
+    </div>
+    <div class="message">
+        <h2></h2>
+    </div>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<!-- SDKs for Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyBMpqeNQTu_OTTslm0lUEKYiS1RMWJFZMQ",
         authDomain: "shs-advertising.firebaseapp.com",
@@ -105,4 +171,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const projectStorage = firebase.storage();
-    const projectFirestore = firebase.database();</script></html>
+    const projectFirestore = firebase.database();
+</script>
+
+</html>

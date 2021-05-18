@@ -1,6 +1,6 @@
 import "../scss/style.scss";
 
-import PureCounter from '@srexi/purecounterjs';
+import PureCounter from "@srexi/purecounterjs";
 
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.min.css";

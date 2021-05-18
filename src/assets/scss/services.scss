@@ -14,11 +14,11 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
   margin: 0 15px;
-  min-height: 305px;
+  max-height: 305px;
 }
 
 .col {
-  margin: 35px 0;
+  margin: 25px 0;
 }
 
 .card-img {
@@ -26,32 +26,32 @@
   height: 220px;
   transition: all 0.7s ease-in-out;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("../img/services/services-1.jpeg") center (center / 100%) no-repeat;
+    url("../img/services/services-1.jpeg") center (center / cover) no-repeat;
 }
 
 .card-img-2 {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("../img/services/services-2.jpeg") (center / 130%) no-repeat;
+    url("../img/services/services-2.jpeg") (center / cover) no-repeat;
 }
 
 .card-img-3 {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("../img/services/services-3.jpeg") (center / 130%) no-repeat;
+    url("../img/services/services-3.jpeg") (center / cover) no-repeat;
 }
 
 .card-img-4 {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("../img/services/services-4.jpeg") (center / 130%) no-repeat;
+    url("../img/services/services-4.jpeg") (center / cover) no-repeat;
 }
 
 .card-img-5 {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("../img/services/services-5.jpeg") (top / 130%) no-repeat;
+    url("../img/services/services-5.jpeg") (top / cover) no-repeat;
 }
 
 .card-img-6 {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("../img/services/services-6.jpeg") (center / 130%) no-repeat;
+    url("../img/services/services-6.jpeg") (center / cover) no-repeat;
 }
 
 .card-title {
@@ -69,34 +69,67 @@
 .card {
   .card-text {
     position: relative;
-    top: -40px;
     opacity: 0;
     height: 0;
+    overflow: hidden;
     transition: all 0.7s ease-in-out;
   }
 
   &:hover {
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+    // box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
     transition: all 0.5s ease-in-out;
 
     .card-text {
-      top: 10px;
       opacity: 1;
+      height: 100px;
+      overflow: scroll;
       transition: all 0.7s ease-in-out;
     }
 
     .card-body {
-      margin-top: -110px;
-      border-radius: 0 0 20px 20px;
-      background-color: #fff;
+      margin-top: -100px;
       transition: all 0.7s ease-in-out;
     }
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1399px) {
+  .card:hover {
+    .card-text {
+      height: 120px;
+    }
+
+    .card-body {
+      margin-top: -120px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
   .col {
     width: 50%;
+  }
+
+  .card:hover {
+    .card-text {
+      height: 100px;
+    }
+
+    .card-body {
+      margin-top: -100px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .card:hover {
+    .card-text {
+      height: 145px;
+    }
+
+    .card-body {
+      margin-top: -145px;
+    }
   }
 }
 
@@ -104,11 +137,47 @@
   .col {
     width: 100%;
   }
+
+  .card:hover {
+    .card-text {
+      height: 100px;
+    }
+
+    .card-body {
+      margin-top: -100px;
+    }
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 430px) {
   .section-title h2 {
     font-size: 24px;
+  }
+
+  .card:hover {
+    .card-text {
+      height: 120px;
+    }
+
+    .card-body {
+      margin-top: -120px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .card:hover {
+    .card-text {
+      height: 170px;
+    }
+
+    .card-body {
+      margin-top: -170px;
+    }
   }
 }
 

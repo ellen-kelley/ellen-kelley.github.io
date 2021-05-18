@@ -22,7 +22,7 @@ module.exports = {
     upload: "./src/assets/js/upload.js",
   },
   output: {
-    publicPath: "./", // prefix path should be '/', for github page please use empty path
+    publicPath: "", // prefix path should be '/', for github page please use empty path
     path: dist,
     filename: "js/[name].bundle.js", // in directory ./dist/js/
     clean: true,
@@ -67,7 +67,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: "file-loader",
@@ -89,9 +89,7 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "src/assets/img", to: "assets/img" },
-      ],
+      patterns: [{ from: "src/assets/img", to: "assets/img" }],
     }),
 
     ...Pages.map(

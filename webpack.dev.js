@@ -6,8 +6,22 @@ module.exports = merge(common, {
   mode: "development",
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
-    port: 9000, // client running on port 9000
+    // writeToDisk: true,
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^\/.*$/,
+          to: function (context) {
+            return context.parsedUrl.pathname + ".html";
+          },
+        },
+      ],
+    },
+
+    watchContentBase: true,
+    liveReload: true,
     open: true,
+    // port: 9000,
     proxy: {
       /**
        * Server running on port 3000

@@ -12,6 +12,14 @@ import AOS from "aos";
 
 // Section - Portfolio Full Width Slider / Carousel //
 
+const images = ["./assets/img/portfolio/traffic.jpg", "./assets/img/portfolio/am-tech.jpg", "./assets/img/portfolio/traffic.jpg", "./assets/img/portfolio/am-tech.jpg"];
+
+if (window.innerWidth < 1020) {
+  document.querySelectorAll(".intro-item").forEach((item, index) => {
+    item.setAttribute("style", `background-image: url(${images[index]})`);
+  });
+}
+
 new Swiper(".intro-carousel", {
   speed: 600,
   loop: true,

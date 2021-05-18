@@ -103,8 +103,8 @@ import "../scss/general.scss";
    */
   on("click", ".mobile-nav-toggle", (e) => {
     select("#navbar").classList.toggle("navbar-mobile");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
+    e.currentTarget.classList.toggle("bi-list");
+    e.currentTarget.classList.toggle("bi-x");
   });
 
   /**
@@ -116,7 +116,7 @@ import "../scss/general.scss";
     (e) => {
       if (select("#navbar").classList.contains("navbar-mobile")) {
         e.preventDefault();
-        this.nextElementSibling.classList.toggle("dropdown-active");
+        e.currentTarget.nextElementSibling.classList.toggle("dropdown-active");
       }
     },
     true
@@ -128,7 +128,7 @@ import "../scss/general.scss";
   on(
     "click",
     ".scrollto",
-    (e) => {
+    function (e) {
       if (select(this.hash)) {
         e.preventDefault();
 
