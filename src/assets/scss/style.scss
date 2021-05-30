@@ -28,7 +28,7 @@
 #hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(45deg, rgba(163, 147, 253, 0.9) 0%, rgba(170, 86, 255, 0.9) 100%),
+  background: linear-gradient(45deg, rgba(153, 135, 255, 0.9) 0%, rgba(161, 68, 255, 0.9) 100%),
     url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
 
@@ -52,9 +52,10 @@
   }
 
   h2 {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin: 20px 0 0 0;
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 500;
     line-height: normal;
     padding: 20px 0;
   }
