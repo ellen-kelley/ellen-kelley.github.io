@@ -620,7 +620,7 @@ section {
 #footer .footer-top .logo-footer img {
   max-height: 80px;
   padding-bottom: 15px;
-  margin-left: 15%;
+  margin-left: 21%;
   display: block;
 }
 
@@ -651,6 +651,14 @@ section {
 
 #footer .footer-top .footer-contact .footer-phone {
   padding-bottom: 15px;
+}
+
+#footer .footer-contact a {
+  color: #fff;
+}
+
+#footer .footer-contact a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #footer .footer-top h4 {

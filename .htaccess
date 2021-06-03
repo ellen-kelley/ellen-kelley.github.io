@@ -1,6 +1,11 @@
 Options +ExecCGI +FollowSymLinks -MultiViews
 
+FallbackResource /error.html
+
 RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
