@@ -18,7 +18,7 @@ const data = [
     type: function () {
       sliderType();
     },
-    price: 500,
+    price: 400,
   },
   {
     id: 2,
