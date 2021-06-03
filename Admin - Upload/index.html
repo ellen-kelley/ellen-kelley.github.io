@@ -20,9 +20,7 @@
     <meta name="msapplication-config" content="./assets/img/favicon.ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
-    <title>Document</title>
+    <title>Upload pictures</title>
 </head>
 <style>
     body {
@@ -94,7 +92,7 @@
     }
 
     span {
-        vertical-align: middle;
+        vertical-align: sub;
     }
 
     .confirm {
@@ -113,12 +111,29 @@
         font-size: 24px;
         font-weight: 600;
         border: 2px solid #fff;
+        cursor: pointer;
     }
 
     .message {
         text-align: center;
         padding: 30px 0;
-        /* display: none; */
+    }
+
+    .loader {
+        width: 45px;
+        height: 45px;
+        border: 5px solid #5E18EA;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+        display: none;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(1turn);
+        }
     }
 </style>
 
@@ -134,19 +149,12 @@
     <div class="container">
     </div>
     <div class="confirm">
+        <div class="loader"></div>
         <button class="sumbit-btn">Հաստատել</button>
     </div>
     <div class="message">
         <h2></h2>
     </div>
-
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
-
-    <!-- Preloader -->
-    <div id="preloader"></div>
 </body>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -158,20 +166,22 @@
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
 
 <script>
-    // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "AIzaSyBMpqeNQTu_OTTslm0lUEKYiS1RMWJFZMQ",
-        authDomain: "shs-advertising.firebaseapp.com",
-        databaseURL: "https://shs-advertising-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "shs-advertising",
-        storageBucket: "shs-advertising.appspot.com",
-        messagingSenderId: "804880876633",
-        appId: "1:804880876633:web:7ae2ab243c2e917bb45d48"
+        apiKey: "AIzaSyAomQMo9N9FZ-jZKIJ5gfW1rcbTCRQV6iw",
+        authDomain: "shs.am",
+        databaseURL: "https://shs-advertising-company-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "shs-advertising-company",
+        storageBucket: "shs-advertising-company.appspot.com",
+        messagingSenderId: "290435863447",
+        appId: "1:290435863447:web:5c42ddbdbbd2646bff6ad2",
+        measurementId: "G-6E0D2HFY1K"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const projectStorage = firebase.storage();
     const projectFirestore = firebase.database();
 </script>
+
+<script src="./index.js"></script>
 
 </html>

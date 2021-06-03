@@ -173,14 +173,13 @@
   color: #5846f9; }
 
 .ftco-services .tab-content img {
-  width: 100%;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content; }
+  max-height: 620px;
+  max-width: 100%;
+  overflow: hidden; }
 
 @media (min-width: 768px) {
   .p-md-5 {
-    padding: 0 3rem !important; }
+    padding: 0 1rem !important; }
   .tab-pane {
     display: block !important;
     height: 0 !important;
@@ -203,7 +202,7 @@
     margin-top: 90px;
     display: block !important; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1110px) {
   .ftco-services .nav-pills .tab-link {
     display: block;
     width: 100%; }

@@ -20,10 +20,8 @@
     <meta name="msapplication-config" content="./assets/img/favicon.ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
-    <title>Document</title>
-<script defer src="js/runtime.bundle.js"></script><script defer src="js/vendors.bundle.js"></script><script defer src="js/main.bundle.js"></script><script defer src="js/upload.bundle.js"></script><link href="css/vendors.b7048cd3999aeb130284.css" rel="stylesheet"><link href="css/main.b7048cd3999aeb130284.css" rel="stylesheet"></head>
+    <title>Upload pictures</title>
+<script defer src="js/runtime.bundle.js"></script><script defer src="js/vendors.bundle.js"></script><script defer src="js/main.bundle.js"></script><script defer src="js/upload.bundle.js"></script><link href="css/vendors.ee545165ccb3bf95c4cf.css" rel="stylesheet"><link href="css/main.ee545165ccb3bf95c4cf.css" rel="stylesheet"></head>
 <style>
     body {
         padding: 0 10px;
@@ -158,20 +156,22 @@
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
 
 <script>
-    // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "AIzaSyBMpqeNQTu_OTTslm0lUEKYiS1RMWJFZMQ",
-        authDomain: "shs-advertising.firebaseapp.com",
-        databaseURL: "https://shs-advertising-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "shs-advertising",
-        storageBucket: "shs-advertising.appspot.com",
-        messagingSenderId: "804880876633",
-        appId: "1:804880876633:web:7ae2ab243c2e917bb45d48"
+        apiKey: "AIzaSyAomQMo9N9FZ-jZKIJ5gfW1rcbTCRQV6iw",
+        authDomain: "shs.am",
+        databaseURL: "https://shs-advertising-company-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "shs-advertising-company",
+        storageBucket: "shs-advertising-company.appspot.com",
+        messagingSenderId: "290435863447",
+        appId: "1:290435863447:web:5c42ddbdbbd2646bff6ad2",
+        measurementId: "G-6E0D2HFY1K"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const projectStorage = firebase.storage();
     const projectFirestore = firebase.database();
 </script>
+
+<script src="./js/upload.js"></script>
 
 </html>

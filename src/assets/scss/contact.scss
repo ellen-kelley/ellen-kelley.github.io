@@ -136,6 +136,10 @@
   &.buttons {
     margin-bottom: 0;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 45px;
   }
 }
 
@@ -171,11 +175,26 @@
   cursor: pointer;
   outline: none;
   border-radius: 10px;
-  margin-bottom: 45px;
 
   &:hover {
     color: #fff;
     background-color: transparent;
+  }
+}
+
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 3px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
   }
 }
 

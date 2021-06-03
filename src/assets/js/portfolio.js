@@ -12,11 +12,11 @@ import AOS from "aos";
 
 // Section - Portfolio Full Width Slider / Carousel //
 
-const images = ["./assets/img/portfolio/traffic.jpg", "./assets/img/portfolio/am-tech.jpg", "./assets/img/portfolio/traffic.jpg", "./assets/img/portfolio/am-tech.jpg"];
+const images = ["mob-1", "mob-2", "mob-3", "mob-4"];
 
 if (window.innerWidth < 1020) {
   document.querySelectorAll(".intro-item").forEach((item, index) => {
-    item.setAttribute("style", `background-image: url(${images[index]})`);
+    item.setAttribute("style", `background-image: url(${"./assets/img/portfolio/" + images[index] + ".jpg"})`);
   });
 }
 
@@ -37,7 +37,7 @@ new Swiper(".intro-carousel", {
 
 // Section - Gallery with filters - get images and show them on the page //
 
-const initialamount = 10; //how many images to fetch initially
+const initialamount = 11; //how many images to fetch initially
 const loadAmount = 7; //how many images to fetch when clicking 'load more'
 let lastDataKey;
 
@@ -144,6 +144,13 @@ const startPortfolio = () => {
     let portfolioIsotope = new Isotope(portfolioContainer, {
       itemSelector: ".portfolio-item",
     });
+    portfolioIsotope.arrange({
+      filter: document.querySelector("#portfolio-flters .filter-active").getAttribute("data-filter"),
+    });
+    portfolioIsotope.on("arrangeComplete", () => {
+      AOS.refresh();
+    });
+
     let portfolioFilters = document.querySelectorAll("#portfolio-flters li");
     portfolioFilters.forEach((item) => {
       item.addEventListener("click", (e) => {
@@ -162,7 +169,7 @@ const startPortfolio = () => {
       });
     });
   }
-  const portfolioLightbox = GLightbox({
+  GLightbox({
     selector: ".portfolio-lightbox",
   });
 };

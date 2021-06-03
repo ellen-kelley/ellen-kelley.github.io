@@ -19,7 +19,6 @@ module.exports = {
     faqs: "./src/assets/js/faqs.js",
     about: "./src/assets/js/about.js",
     calculator: "./src/assets/js/calculator.js",
-    upload: "./src/assets/js/upload.js",
     error: "./src/assets/js/error.js",
   },
   output: {

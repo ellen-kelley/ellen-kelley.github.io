@@ -10,7 +10,8 @@ document.querySelector(".uploader").addEventListener("change", (e) => {
         <img src="${URL.createObjectURL(file)}">
         <select class="form-select" aria-label="Default select example">
           <option selected>Ընտրեք filter</option>
-          <option>Filter 1</option>
+          <option>F
+          ilter 1</option>
           <option>Filter 2</option>
           <option>Filter 3</option>
         </select>
@@ -33,6 +34,8 @@ const previewData = (template, selectedImages) => {
     getFilters(selectedImages);
     document.querySelector(".sumbit-btn").addEventListener("click", (e) => {
       sendToDatabase(selectedImages);
+      document.querySelector(".sumbit-btn").style.display = "none";
+      document.querySelector(".loader").style.display = "block";
     });
   }
 };
@@ -58,15 +61,15 @@ const sendToDatabase = (selectedImages) => {
       (snap) => {},
       (err) => {
         console.log(err);
+        document.querySelector(".loader").style.display = "none";
         document.querySelector(".message h2").textContent = "Գործողությունը ձախողվեց!";
-        document.querySelector(".message").style.display = "block";
       },
       async () => {
         const url = await storageRef.getDownloadURL();
         const name = file.name;
         const filter = file.filter;
         await newImageRef.set({ url, name, filter });
-        document.querySelector(".message").style.display = "block";
+        document.querySelector(".loader").style.display = "none";
         document.querySelector(".message h2").textContent = "Նկարները հաջողությամբ տեղադրվել են!";
       }
     );

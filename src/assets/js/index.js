@@ -39,22 +39,57 @@ new Swiper(".hero-swiper", {
 
 // Subsection  - Porfolio isotope //
 
-window.addEventListener("load", () => {
-  let portfolioContainer = document.querySelector(".portfolio-container");
-  if (portfolioContainer) {
-    let portfolioIsotope = new Isotope(portfolioContainer, {
-      itemSelector: ".portfolio-item",
-    });
-  }
-  const portfolioLightbox = GLightbox({
-    selector: ".portfolio-lightbox",
-  });
+let portfolioContainer = document.querySelector(".portfolio-container");
+const portfolioImages = [
+  "happy-neon.jpeg",
+  "am-tech.jpeg",
+  "hotel-goris.jpeg",
+  "crystal-front.jpeg",
+  "pricetime.jpeg",
+  "traffic.jpeg",
+  "jalyuzi-2.jpeg",
+  "illustion-side.jpeg",
+  "gml.jpeg",
+];
+
+portfolioImages.forEach((item) => {
+  portfolioContainer.innerHTML += `
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <div class="portfolio-wrap">
+          <img src=${"assets/img/index/" + item} class="img-fluid" alt="">
+          <div class="portfolio-links">
+              <a href=${"assets/img/index/" + item} data-gallery="portfolioGallery"
+                  class="portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+          </div>
+      </div>
+    </div>`;
 });
 
-// Subsection  - Initiate portfolio lightbox //
+Promise.all(
+  Array.from(document.images).map((img) => {
+    if (img.complete) return Promise.resolve(img.naturalHeight !== 0);
+    return new Promise((resolve) => {
+      img.addEventListener("load", () => resolve(true));
+      img.addEventListener("error", () => resolve(false));
+    });
+  })
+).then((results) => {
+  if (results.every((res) => res)) {
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: ".portfolio-item",
+      });
+    }
+    GLightbox({
+      selector: ".portfolio-lightbox",
+    });
 
-const portfolioLightbox = GLightbox({
-  selector: ".portfolio-lightbox",
+    // Subsection  - Initiate portfolio lightbox //
+
+    const portfolioLightbox = GLightbox({
+      selector: ".portfolio-lightbox",
+    });
+  }
 });
 
 // Section - Testimonials Slider //

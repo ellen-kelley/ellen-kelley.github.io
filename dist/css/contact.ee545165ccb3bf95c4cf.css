@@ -33,18 +33,26 @@
       margin: 10px 0;
       padding-bottom: 10px; }
 
-.contact-form .info-box p {
+.contact-form .info-box a {
       padding: 0;
       line-height: 28px;
       font-size: 16px;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      display: block;
+      color: #444444; }
 
-.contact-form .info-box p.email {
-        padding-top: 10px; }
-
-.contact-form .info-box p small {
+.contact-form .info-box a small {
         color: #444444;
         font-weight: 400; }
+
+.contact-form .info-box a:hover {
+        color: rgba(68, 68, 68, 0.71373); }
+
+.contact-form .info-box a:hover > small {
+        color: rgba(68, 68, 68, 0.71373); }
+
+.contact-form .info-box a.email {
+        padding-top: 10px; }
 
 .contact-form-container {
   font-weight: 700;
@@ -103,7 +111,11 @@
 
 .app-form-group.buttons {
     margin-bottom: 0;
-    text-align: right; }
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 45px; }
 
 .app-form-control {
   width: 100%;
@@ -145,12 +157,31 @@
   background-color: #fff;
   cursor: pointer;
   outline: none;
-  border-radius: 10px;
-  margin-bottom: 45px; }
+  border-radius: 10px; }
 
 .app-form-button:hover {
     color: #fff;
     background-color: transparent; }
+
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 3px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  display: none; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn); } }
 
 .app-form-group .invalid-feedback {
   color: #fff025; }

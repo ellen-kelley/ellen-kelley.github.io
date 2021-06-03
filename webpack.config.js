@@ -35,11 +35,6 @@ module.exports.Pages = [
     js: ["main", "calculator"],
   },
   {
-    template: "./src/upload.html",
-    filename: "upload.html",
-    js: ["main", "upload"],
-  },
-  {
     template: "./src/error.html",
     filename: "error.html",
     js: ["main", "error"],
