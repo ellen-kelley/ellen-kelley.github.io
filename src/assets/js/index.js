@@ -98,7 +98,7 @@ new Swiper(".testimonials-slider", {
   speed: 600,
   loop: true,
   autoplay: {
-    delay: 4000,
+    delay: 5200,
     disableOnInteraction: false,
   },
   slidesPerView: "auto",

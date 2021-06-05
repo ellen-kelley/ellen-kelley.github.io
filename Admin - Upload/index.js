@@ -1,4 +1,4 @@
-const filters = ["", "filter-app", "filter-card", "filter-web"];
+const filters = ["", "filter-one", "filter-two", "no-filter"];
 document.querySelector(".uploader").addEventListener("change", (e) => {
   const typesAllowed = ["image/png", "image/jpeg"];
   let selectedImages = Array.from(e.target.files);
@@ -10,10 +10,9 @@ document.querySelector(".uploader").addEventListener("change", (e) => {
         <img src="${URL.createObjectURL(file)}">
         <select class="form-select" aria-label="Default select example">
           <option selected>Ընտրեք filter</option>
-          <option>F
-          ilter 1</option>
-          <option>Filter 2</option>
-          <option>Filter 3</option>
+          <option>Ծավալային տառեր</option>
+          <option>Lightbox</option>
+          <option>Այլ</option>
         </select>
       </div>
       `;
