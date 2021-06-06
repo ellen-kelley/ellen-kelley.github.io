@@ -53,11 +53,14 @@
 
   h2 {
     color: rgba(255, 255, 255, 0.9);
-    margin: 20px 0 0 0;
     font-size: 21px;
     font-weight: 500;
     line-height: normal;
-    padding: 20px 0;
+    padding-top: 40px;
+
+    p:nth-of-type(even) {
+      padding-top: 15px;
+    }
   }
 
   .btn-get-started {
