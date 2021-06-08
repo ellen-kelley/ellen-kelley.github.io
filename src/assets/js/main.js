@@ -1,11 +1,13 @@
+import "../scss/general.scss";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import "swiper/swiper-bundle.min.css";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "boxicons/css/boxicons.min.css";
-
-import "../scss/general.scss";
 
 (() => {
   "use strict";
@@ -125,25 +127,25 @@ import "../scss/general.scss";
   /**
    * Scroll with offset on links with a class name .scrollto
    */
-  on(
-    "click",
-    ".scrollto",
-    function (e) {
-      if (select(this.hash)) {
-        e.preventDefault();
+  // on(
+  //   "click",
+  //   ".scrollto",
+  //   function (e) {
+  //     if (select(this.hash)) {
+  //       e.preventDefault();
 
-        let navbar = select("#navbar");
-        if (navbar.classList.contains("navbar-mobile")) {
-          navbar.classList.remove("navbar-mobile");
-          let navbarToggle = select(".mobile-nav-toggle");
-          navbarToggle.classList.toggle("bi-list");
-          navbarToggle.classList.toggle("bi-x");
-        }
-        scrollto(this.hash);
-      }
-    },
-    true
-  );
+  //       let navbar = select("#navbar");
+  //       if (navbar.classList.contains("navbar-mobile")) {
+  //         navbar.classList.remove("navbar-mobile");
+  //         let navbarToggle = select(".mobile-nav-toggle");
+  //         navbarToggle.classList.toggle("bi-list");
+  //         navbarToggle.classList.toggle("bi-x");
+  //       }
+  //       scrollto(this.hash);
+  //     }
+  //   },
+  //   true
+  // );
 
   /**
    * Scroll with offset on page load with hash links in the url

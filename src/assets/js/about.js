@@ -1,6 +1,8 @@
 import "../scss/about.scss";
-import Swiper from "swiper/bundle";
-import "swiper/swiper-bundle.min.css";
+
+import Swiper from 'swiper';
+import { Pagination, Autoplay } from "swiper/core";
+Swiper.use([Pagination, Autoplay]);
 
 // Section - Testimonials Slider //
 

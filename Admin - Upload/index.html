@@ -14,15 +14,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.ico/favicon-16x16.png">
     <link rel="manifest" href="./assets/img/favicon.ico/site.webmanifest">
-    <link rel="mask-icon" href="./assets/img/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="./assets/img/favicon.ico/safari-pinned-tab.svg" color="#5e18ea">
     <link rel="shortcut icon" href="./assets/img/favicon.ico/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="./assets/img/favicon.ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script defer="defer" src="./index.js"></script>
 
 </head>
 <style>
@@ -95,14 +97,14 @@
     }
 
     span {
-        vertical-align: sub;
+        vertical-align: middle;
     }
 
     .confirm {
         display: none;
     }
 
-    .sumbit-btn {
+    .btn {
         padding: 8px 25px;
         margin: 25px auto;
         text-align: center;
@@ -115,6 +117,15 @@
         font-weight: 600;
         border: 2px solid #fff;
         cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #3e20a0;
+        color: #fff;
+    }
+
+    .refresh-btn {
+        display: none;
     }
 
     .message {
@@ -153,11 +164,13 @@
     </div>
     <div class="confirm">
         <div class="loader"></div>
-        <button class="sumbit-btn">Հաստատել</button>
+        <button class="btn sumbit-btn">Հաստատել</button>
     </div>
     <div class="message">
         <h2></h2>
     </div>
+    <button class="btn refresh-btn">Տեղադրել մեկ այլ նկար </button>
+
 </body>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -184,7 +197,5 @@
     const projectStorage = firebase.storage();
     const projectFirestore = firebase.database();
 </script>
-
-<script src="./index.js"></script>
 
 </html>

@@ -2,8 +2,9 @@ import "../scss/style.scss";
 
 import PureCounter from "@srexi/purecounterjs";
 
-import Swiper from "swiper/bundle";
-import "swiper/swiper-bundle.min.css";
+import Swiper from "swiper";
+import { Pagination, EffectCube, Autoplay } from "swiper/core";
+Swiper.use([Pagination, EffectCube, Autoplay]);
 
 import Isotope from "isotope-layout";
 
@@ -56,10 +57,10 @@ portfolioImages.forEach((item) => {
   portfolioContainer.innerHTML += `
     <div class="col-lg-4 col-md-6 portfolio-item">
       <div class="portfolio-wrap">
-          <img src=${"assets/img/index/" + item} class="img-fluid" alt="">
+          <img src=${"assets/img/index/" + item} class="img-fluid" alt="portfolio image" loading="lazy">
           <div class="portfolio-links">
               <a href=${"assets/img/index/" + item} data-gallery="portfolioGallery"
-                  class="portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  class="portfolio-lightbox" aria-label="zoom icon"><i class="bi bi-zoom-in"></i></a>
           </div>
       </div>
     </div>`;

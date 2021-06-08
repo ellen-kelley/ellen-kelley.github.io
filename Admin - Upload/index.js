@@ -70,7 +70,12 @@ const sendToDatabase = (selectedImages) => {
         await newImageRef.set({ url, name, filter });
         document.querySelector(".loader").style.display = "none";
         document.querySelector(".message h2").textContent = "Նկարները հաջողությամբ տեղադրվել են!";
+        document.querySelector(".refresh-btn").style.display = "block";
       }
     );
   });
+};
+
+document.querySelector(".refresh-btn").onclick = () => {
+  location.reload();
 };
