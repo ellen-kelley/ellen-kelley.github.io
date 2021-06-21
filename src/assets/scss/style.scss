@@ -34,7 +34,11 @@
 
   .container,
   .container-fluid {
-    max-width: 1800px;
+    // max-width: 1400px;
+    // padding-right: clamp(20px, 5%, 60px);
+    // padding-left: clamp(20px, 5%, 60px);
+    padding-top: clamp(35px, 10%, 60px);
+
   }
 }
 

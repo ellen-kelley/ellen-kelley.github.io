@@ -84,8 +84,8 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].[hash].css", // in directory ./dist/css/
-      chunkFilename: "css/[name].[hash].css", // in directory ./dist/css/
+      filename: "css/[name].bundle.css", // in directory ./dist/css/
+      chunkFilename: "css/[name].bundle.css", // in directory ./dist/css/
     }),
 
     new CopyWebpackPlugin({
